@@ -23,10 +23,12 @@ final class AccountHolders extends AbstractMigration
             ->addColumn('cpf',  'string', ['limit' => 20])
             ->addColumn('cnpj', 'string', ['limit' => 20])
             ->addColumn('rg',   'string', ['limit' => 20])
-            ->addColumn('stateRegistration', 'integer')
-            ->addColumn('birthDate', 'date')
-            ->addColumn('foundationDate', 'date')
-            ->addColumn('celphone', 'string', ['limit' => 20])
+            ->addColumn('stateRegistration', 'string',['limit' => 30])
+            ->addColumn('birthDate', 'string')
+            ->addColumn('foundationDate', 'string')
+            ->addColumn('cellphone', 'string', ['limit' => 20])
+            ->addColumn('updated_at', 'date',['null'=>true])
+            ->addColumn('created_at', 'date',['null'=>true])
             ->create();
     }
 }

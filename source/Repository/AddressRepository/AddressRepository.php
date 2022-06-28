@@ -8,6 +8,17 @@ use Source\Model\AddressModel;
 class AddressRepository extends AddressModel implements AddressInterface{
 
 
+    public function checkAddress(array $data)
+    {
+
+        
+    }
+
+    public function storageAddress($accountHolder_id, $address)
+    {
+
+        
+    }
 
 
 }
