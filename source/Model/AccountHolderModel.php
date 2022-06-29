@@ -100,5 +100,8 @@ class AccountHolderModel  extends Model
         $this->cellphone = $cellphone;
     }
 
-
+    public function address()
+    {
+        return $this->hasOne(AddressModel::class, 'accountHolder_id');
+    }
 }

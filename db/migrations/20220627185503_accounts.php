@@ -22,6 +22,8 @@ final class Accounts extends AbstractMigration
         $table->addColumn('number', 'integer')
         ->addColumn('value', 'double')
         ->addColumn('accountholder_id','integer',['null' => true])
+        ->addColumn('updated_at', 'date',['null'=>true])
+        ->addColumn('created_at', 'date',['null'=>true])
         ->create();
 
         $table->addForeignKey('accountholder_id', 'account_holders', 'id', ['delete' => 'SET_NULL', 'update' => 'NO_ACTION'])

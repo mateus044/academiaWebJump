@@ -3,6 +3,7 @@
 require __DIR__."/vendor/autoload.php";
 
 use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\Config;
 
 $capsule = new Capsule();
 

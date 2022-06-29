@@ -3,17 +3,22 @@
 namespace Source\Controllers;
 
 use PlugRoute\Http\Request;
-
+use PlugHttp\Response;
 use Source\Repository\AccountHolderRepository\AccountHolderRepository;
+use Source\Repository\AccountHolderRepository\AccountHoulderValidationRepository;
+use Source\Resource\AccountHolderResource\AccountHolderCreateResource;
+use Source\Utils\FromJson;
 
 class AccountHolderController {
 
 
     private $accountHolder;
+    private $response;
 
-    public function __construct(AccountHolderRepository $accountHolder)
+    public function __construct(AccountHolderRepository $accountHolder, Response $response) 
     {
         $this->accountHolder = $accountHolder;
+        $this->response = $response;
     }
 
 
@@ -50,8 +55,17 @@ class AccountHolderController {
             'address'  => $address
         );
     
-        $result = $this->accountHolder->storageAccountHolder($array);
-        
+        $response = $this->accountHolder->storageAccountHolder($array);
+        if(isset($response['code'])){
+
+            $json = FromJson::fromJsonError($response['message'], $response['code']);
+            echo $json;
+        } else {
+
+            //var_dump($response->name);
+            $json = (new AccountHolderCreateResource())->toArray($response);
+            echo $json;
+        }
     }
 
     public function transferAccount(Request $reques)

@@ -100,7 +100,6 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
      */
     private function _cpf($data)
     {
-
         if (!isset($data['cpf'])) {
             return MessageValidation::$required;
         }

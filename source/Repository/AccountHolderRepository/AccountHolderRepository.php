@@ -6,6 +6,7 @@ use Exception;
 use Source\Interfaces\AccountHolderInterface\AccountHolderInterface;
 use Source\Model\AccountHolderModel;
 use Source\Repository\AddressRepository\AddressRepository;
+use Source\Utils\FromJson;
 
 class AccountHolderRepository extends AccountHolderModel implements AccountHolderInterface {
 
@@ -16,8 +17,8 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
         $response = $accountHoulderValidation->validateAccountHolder($data);
         
         if(isset($response->message)){
-            $teste = json_encode($response->message);
-            throw new Exception($teste, 400);
+            $result = json_encode($response->message);
+            throw new Exception($result, 400);
         } else {
             return $response;
         }
@@ -25,25 +26,23 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
 
     public function storageAccountHolder(array $data)
     {
+        
         try {
-            
           $accountHoulderValidation = $this->checkAccountHolder($data);   
-          //$accountHolder = $this->create($accountHoulderValidation);
-          $address = $this->storageAddress(1, $data['address']);
-
+          $accountHolder = $this->create($accountHoulderValidation);
+          $address  = $this->storageAddress($accountHolder->id, $data['address']);
+          return $accountHolder->load('address');
         
         } catch (Exception $e) {
-            echo($e->getMessage());
+            return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }
     }
 
     public function storageAddress(int $accountHolder_id, $address)
     {
-
         $addresRepository = new AddressRepository();
-        $response = $addresRepository->storageAddress($accountHolder_id, $address);
-        
-
+        $response = $addresRepository->storageAddress($accountHolder_id, $address); 
+        return true;
     }
 
 
