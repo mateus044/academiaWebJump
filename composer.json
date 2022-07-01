@@ -26,7 +26,10 @@
         "robmorgan/phinx": "^0.12.10",
         "monolog/monolog": "^2.6",
         "erandir/plug-route": "^4.4",
-        "illuminate/database":"^7.28"
+        "illuminate/database":"^8.83.18",
+        "illuminate/events": "^8.83",
+        "erandir/plug-http": "^2.0"
+        
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"

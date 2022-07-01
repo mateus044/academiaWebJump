@@ -14,8 +14,8 @@ final class Address extends AbstractMigration
         ->addColumn('cep',  'string', ['limit' => 20])
         ->addColumn('city', 'string',['limit' => 20])
         ->addColumn('uf',   'string',['limit' => 5])
-        ->addTimestamps()
         ->addColumn('accountHolder_id', 'integer',['null' => true])
+        ->addTimestamps()
         ->create();
         $table->addForeignKey('accountHolder_id', 'account_holders', 'id', ['delete' => 'SET_NULL', 'update' => 'NO_ACTION'])
         ->save();

@@ -2,9 +2,10 @@
 
 namespace Source\Resource\AccountHolderResource;
 
+use Source\Resource\AccountResource\AccountCreateResource;
 use Source\Resource\AddressResource\AddressCreateResource;
 
-class AccountHolderCreateResource {
+class AccountHolderResource {
 
 
     /**
@@ -22,7 +23,7 @@ class AccountHolderCreateResource {
             'birthDate'      => $request->birthDate,
             'foundationDate' => $request->foundationDate,
             'cellphone'      => $request->cellphone,
-            'addres'         => (new AddressCreateResource())->toArray($request->address)
+            'account'        => (new AccountCreateResource())->toArray($request->account)
         );
 
         return $array;        

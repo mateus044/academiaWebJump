@@ -55,7 +55,6 @@ class ValidateCpf {
     public function getCPF(int $cpf)
     {   
         $cpf = $this->accountHolders::where('cpf','=', $cpf)->first();
-        //return $cpf ;
-        return null;
+        return $cpf;
     }
 }

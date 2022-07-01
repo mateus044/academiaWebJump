@@ -100,8 +100,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
      */
     private function _cpf($data)
     {
-        if (!isset($data['cpf'])) {
-            return MessageValidation::$required;
+        if (is_null($data['cpf'])) {
+            return null;
         }
 
         if (!is_string($data['cpf'])) {
@@ -124,8 +124,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
      */
     private function _cnpj($data)
     {
-        if (!isset($data['cnpj'])) {
-            return MessageValidation::$required;
+        if (is_null($data['cnpj'])) {       
+            return null;
         }
 
         if (!is_string($data['cnpj'])) {

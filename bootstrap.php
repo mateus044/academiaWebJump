@@ -3,8 +3,8 @@
 require __DIR__."/vendor/autoload.php";
 
 use Illuminate\Database\Capsule\Manager as Capsule;
-use Illuminate\Support\Facades\Config;
-
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
 $capsule = new Capsule();
 
 $config = [
@@ -18,6 +18,9 @@ $config = [
     "collation" => "utf8_unicode_ci",
 ];
 
+
 $capsule->addConnection($config);
+$capsule->getConnection();
+$capsule->setEventDispatcher(new Dispatcher(new Container));
 $capsule->setAsGlobal();
 $capsule->bootEloquent();

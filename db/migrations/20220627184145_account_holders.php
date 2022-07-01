@@ -20,8 +20,8 @@ final class AccountHolders extends AbstractMigration
     {
         $table = $this->table('account_holders');
         $table->addColumn('name', 'string', ['limit' => 100])
-            ->addColumn('cpf',  'string', ['limit' => 20])
-            ->addColumn('cnpj', 'string', ['limit' => 20])
+            ->addColumn('cpf',  'string', ['limit' => 20, 'null' => true])
+            ->addColumn('cnpj', 'string', ['limit' => 20, 'null' => true])
             ->addColumn('rg',   'string', ['limit' => 20])
             ->addColumn('stateRegistration', 'string',['limit' => 30])
             ->addColumn('birthDate', 'string')

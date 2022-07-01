@@ -19,14 +19,12 @@ final class Accounts extends AbstractMigration
     public function change(): void
     {
         $table = $this->table('accounts');
-        $table->addColumn('number', 'integer')
-        ->addColumn('value', 'double')
-        ->addColumn('accountholder_id','integer',['null' => true])
-        ->addColumn('updated_at', 'date',['null'=>true])
-        ->addColumn('created_at', 'date',['null'=>true])
+        $table->addColumn('number', 'biginteger')
+        ->addColumn('value', 'float')
+        ->addColumn('accountHolder_id','integer',['null' => true])
+        ->addTimestamps()
         ->create();
-
-        $table->addForeignKey('accountholder_id', 'account_holders', 'id', ['delete' => 'SET_NULL', 'update' => 'NO_ACTION'])
+        $table->addForeignKey('accountHolder_id', 'account_holders', 'id', ['delete' => 'SET_NULL', 'update' => 'NO_ACTION'])
         ->save();
     }
 }

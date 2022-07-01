@@ -11,13 +11,13 @@ class AccountHolderModel  extends Model
     protected $fillable = ['name','cpf','cnpj','rg','stateRegistration','birthDate','foundationDate','cellphone'];
 
     private string $name;
-    private string $cpf;
-    private string $cnpj;
     private string $rg;
     private string $stateRegistration;
     private string $birthDate;
     private string $foundationDate;
     private string $cellphone;
+    private $cnpj;
+    private $cpf;
    
 
     public function getName()
@@ -104,4 +104,10 @@ class AccountHolderModel  extends Model
     {
         return $this->hasOne(AddressModel::class, 'accountHolder_id');
     }
+
+    public function account()
+    {
+        return $this->hasOne(AccountModel::class, 'accountHolder_id');
+    }
+
 }

@@ -60,7 +60,6 @@ class ValidateCnpj
     public function getCnpj(int $cnpj)
     {
         $cnpj = $this->accountHolders::where('cnpj', '=', $cnpj)->first();
-        //return $cnpj;
-        return null;
+        return $cnpj;
     }
 }

@@ -4,6 +4,9 @@ namespace Source\Utils;
 
 class MessageValidation {
 
+    public static string $onlyPositiveNumbers = "onlyPositiveNumbers";
+    public static string $accountExists = "accountExists";
+    public static string $accountNotExists = "accountNotExists";
     public static string $onlyString = "onlyString";
     public static string $onlyNumbers = "onlyNumbers";
     public static string $onlyInteger = "onlyInteger";
@@ -18,4 +21,8 @@ class MessageValidation {
     public static string $cnpjExists = "cnpjExists";
     public static string $invalidCep = "invalidCep";
     public static string $invalidUf  = "invalidUf";
+    public static string $accountHolderNotFount  = "accountHolderNotFount";
+    public static string $onlyFloat  = "onlyFloat";
+    public static string $cpfOrCnpj = "please chose CPF or CNPJ";
+    public static string $insufficientFunds = "insufficient funds";
 }
