@@ -13,8 +13,10 @@ class Logs
      */
     public static function logAccountHolder(string $mensagem, string $modo = 'info')
     {
+        //$teste = require __DIR__ ."/../Logs/AccountHolderLogs/accountHolder.log";
         $logger = new Logger('logs');
-        $logger->pushHandler(new StreamHandler(dirname(__FILE__) . './accountHolder.log'));
+        $logger->pushHandler(new StreamHandler(dirname(__FILE__) . ''));
+        $logger->pushHandler(new StreamHandler(dirname(__FILE__) . '/../Logs/AccountHolderLogs/accountHolder.log'));
 
         switch ($modo) {
 

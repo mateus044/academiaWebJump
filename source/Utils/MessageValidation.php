@@ -2,8 +2,8 @@
 
 namespace Source\Utils;
 
-class MessageValidation {
-
+class MessageValidation 
+{
     public static string $onlyPositiveNumbers = "onlyPositiveNumbers";
     public static string $accountExists = "accountExists";
     public static string $accountNotExists = "accountNotExists";
@@ -24,5 +24,7 @@ class MessageValidation {
     public static string $accountHolderNotFount  = "accountHolderNotFount";
     public static string $onlyFloat  = "onlyFloat";
     public static string $cpfOrCnpj = "please chose CPF or CNPJ";
-    public static string $insufficientFunds = "insufficient funds";
+    public static string $insufficientFunds = "insufficient fund";
+    public static string $transferSuccessfully = "Transfer made successfully";
+    public static string $transferInvalid = "The source account number cannot be the same as the transfer destination";
 }

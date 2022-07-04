@@ -2,8 +2,10 @@
 
 namespace Source\Interfaces\AccountHolderInterface;
 
-interface AccountHoulderValidationInterface {
-
-    
+interface AccountHoulderValidationInterface 
+{
+    public function validateAccountHolder(array $data);
+    public function mountAccountHoulder();
+    public function validateFormAccountHoulder($data);
 
 }

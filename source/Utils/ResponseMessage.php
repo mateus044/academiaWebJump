@@ -2,9 +2,8 @@
 
 namespace Source\Utils;
 
-class ResponseMessage {
-
-
+class ResponseMessage 
+{
     /**
      * Padroniza o retorno das exceções geradas.
      * @param string $message
@@ -17,9 +16,5 @@ class ResponseMessage {
         $self = new self();
         $self->me = $message;
         return $self;
-
-
     }
-
-
 }

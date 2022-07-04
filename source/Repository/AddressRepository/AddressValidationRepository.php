@@ -2,6 +2,7 @@
 
 namespace Source\Repository\AddressRepository;
 
+use Source\Interfaces\AddreesInterface\AddressValidationInterface;
 use Source\Model\AddressModel;
 use Source\Support\ValidateCep;
 use Source\Support\ValidateUf;
@@ -11,7 +12,7 @@ use Source\Utils\MessageValidation;
  *@property bool $isValid
  *@property string[] $message
  */
-class AddressValidationRepository extends AddressModel
+class AddressValidationRepository extends AddressModel implements AddressValidationInterface
 {
 
     public array $message;
@@ -28,7 +29,7 @@ class AddressValidationRepository extends AddressModel
         }
     }
 
-    public function mountAddress()
+    public function mountAddress() : array 
     {
         $array = array(
             'street' => $this->getStreet(),
@@ -71,7 +72,8 @@ class AddressValidationRepository extends AddressModel
 
     /**
      * valida o campo street
-     * return string|null
+     * @param array $data
+     * @return string|null
     */
     private function _street($data)
     {
@@ -91,7 +93,8 @@ class AddressValidationRepository extends AddressModel
 
     /**
      * valida o campo number
-     * return string|null
+     * @param array $data
+     * @return string|null
     */
     private function _number($data)
     {
@@ -111,7 +114,8 @@ class AddressValidationRepository extends AddressModel
 
     /**
      * valida o campo cep
-     * return string|null
+     * @param array $data
+     * @return string|null
     */
     private function _cep($data)
     {
@@ -137,7 +141,8 @@ class AddressValidationRepository extends AddressModel
 
     /**
      * valida o campo city
-     * return string|null
+     * @param array $data
+     * @return string|null
     */
     private function _city($data)
     {
@@ -157,7 +162,8 @@ class AddressValidationRepository extends AddressModel
 
     /**
      * valida o campo uf
-     * return string|null
+     * @param array $data
+     * @return string|null
     */
     private function _uf($data)
     {
@@ -182,7 +188,8 @@ class AddressValidationRepository extends AddressModel
 
     /**
      * valida o accountHolder_id
-     * return string|null
+     * @param array $data
+     * @return string|null
     */
     private function _accountHolder_id($accountHolder_id)
     {

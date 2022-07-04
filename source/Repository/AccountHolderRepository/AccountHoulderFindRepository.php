@@ -3,16 +3,16 @@
 namespace Source\Repository\AccountHolderRepository;
 
 use Exception;
+use Source\Interfaces\AccountHolderInterface\AccountHoulderFindInterface;
 use Source\Model\AccountHolderModel;
 use Source\Model\AccountModel;
 use Source\Utils\FormatExceptionError;
 use Source\Utils\MessageValidation;
 
-class AccountHoulderFindRepository extends AccountHolderModel {
-
+class AccountHoulderFindRepository extends AccountHolderModel implements AccountHoulderFindInterface {
 
     public function getAccountHolder(int $id)
-    {
+    {   
         $accountHolder = $this->find($id);
         if(!$accountHolder){
             $error = FormatExceptionError::exceptionError(MessageValidation::$accountHolderNotFount);

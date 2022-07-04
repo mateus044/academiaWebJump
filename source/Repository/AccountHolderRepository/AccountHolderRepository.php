@@ -12,8 +12,8 @@ use Source\Repository\AddressRepository\AddressRepository;
 use Source\Utils\FormatExceptionError;
 use Source\Utils\MessageValidation;
 
-class AccountHolderRepository extends AccountHolderModel implements AccountHolderInterface {
-
+class AccountHolderRepository extends AccountHolderModel implements AccountHolderInterface 
+{
 
     public function chechCnpjAndCpf(array $data)
     {     
@@ -93,7 +93,6 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
             $accountHolder = $this->findAccountHolder($accountHolder_id);
             $account = $accounReposioty->createAccount($accountHolder->id, $data);
             return $accountHolder->load('account');
-
         } catch (Exception $e) {
        
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
@@ -105,24 +104,35 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
         try {
             $accountHolder = new AccountHoulderFindRepository();
             $account = $accountHolder->getAccountHolder($accountHolder_id);
-            $deposit = (new AccountUpdateRepository())->depositValue($account->account, $value);
-
-           
+            $deposit = (new AccountUpdateRepository())->depositValue($account->account, $value); 
             return $account->load('account'); 
-
         } catch (Exception $e) {
             
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }
     }
 
-    public function accountWithdraw(int $accountHolder_id,  $value)
+    public function accountWithdraw(int $accountHolder_id,  $value) 
     {
         try {
 
             $accountHolder = new AccountHoulderFindRepository();
             $account = $accountHolder->getAccountHolder($accountHolder_id);
             $deposit = (new AccountUpdateRepository())->withdrawValue($account->account, $value);
+            return $account->load('account'); 
+        } catch (Exception $e) {
+            
+            return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
+        }
+    }
+
+    public function accountTransfer(int $accountHolder_id, int $numberAccount, float $value)
+    {
+        try {
+
+            $accountHolder = new AccountHoulderFindRepository();
+            $account  = $accountHolder->getAccountHolder($accountHolder_id);
+            $transfer = (new AccountUpdateRepository())->manageTransfer($account, $numberAccount, $value);
             return $account->load('account'); 
             
         } catch (Exception $e) {

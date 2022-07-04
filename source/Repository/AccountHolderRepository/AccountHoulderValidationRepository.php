@@ -15,7 +15,6 @@ use Source\Utils\MessageValidation;
  */
 class AccountHoulderValidationRepository extends AccountHolderModel implements AccountHoulderValidationInterface
 {
-
     public array $message;
     public bool $isValid;
 
@@ -30,7 +29,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
         }
     }
 
-    public function mountAccountHoulder()
+    public function mountAccountHoulder() : array
     {
 
         $array = array(
@@ -47,7 +46,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
         return $array;
     }
 
-    public function validateFormAccountHoulder($data)
+    public function validateFormAccountHoulder($data) 
     {
         $array = [];
         $array['name']  = $this->_name($data);
@@ -78,7 +77,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     /**
      * valida o campo name
-     * return string|null
+     * @return string|null
      */
     private function _name($data)
     {
@@ -96,7 +95,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     /**
      * valida o campo cpf
-     * return string|null
+     * @return string|null
      */
     private function _cpf($data)
     {
@@ -120,7 +119,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     /**
      * valida o campo cnpj
-     * return string|null
+     * @return string|null
      */
     private function _cnpj($data)
     {
@@ -144,7 +143,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     /**
      * valida o campo rg
-     * return string|null
+     * @return string|null
      */
     private function _rg($data)
     {
@@ -162,7 +161,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     /**
      * valida o campo stateRegistration
-     * return string|null
+     * @return string|null
      */
     private function _stateRegistration($data)
     {
@@ -182,7 +181,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     /**
      * valida o campo birthDate
-     * return string|null
+     * @return string|null
      */
     private function _birthDate($data)
     {
@@ -201,7 +200,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     /**
      * valida o campo foundationDate
-     * return string|null
+     * @return string|null
      */
     private function _foundationDate($data)
     {
@@ -220,7 +219,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     /**
      * valida o campo cellphone
-     * return string|null
+     * @return string|null
      */
     private function _cellphone($data)
     {

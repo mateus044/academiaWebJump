@@ -9,8 +9,8 @@ use Source\Resource\AccountHolderResource\AccountHolderCreateResource;
 use Source\Resource\AccountHolderResource\AccountHolderResource;
 use Source\Utils\FromJson;
 
-class AccountHolderController {
-
+class AccountHolderController 
+{
 
     private $accountHolder;
 
@@ -19,11 +19,9 @@ class AccountHolderController {
         $this->accountHolder = $accountHolder;
     }
 
-
     public function storageAccount(Request $request)
     {
       $request = $request->all();
-    
       isset($request['name'])      ? $name      = $request['name']      : $name      = null;
       isset($request['cpf'])       ? $cpf       = $request['cpf']       : $cpf       = null;
       isset($request['cnpj'])      ? $cnpj      = $request['cnpj']      : $cnpj      = null;
@@ -33,7 +31,6 @@ class AccountHolderController {
       isset($request['address'])   ? $address   = $request['address']   : $address   = null;
       isset($request['stateRegistration']) ? $stateRegistration = $request['stateRegistration'] : $stateRegistration = null;
       isset($request['foundationDate'])    ? $foundationDate    = $request['foundationDate']    : $foundationDate    = null;
-
 
         $array = array(
 
@@ -88,7 +85,6 @@ class AccountHolderController {
         }
     }
 
-
     public function depositAccount(Request $request)
     {
         $request = $request->all();
@@ -105,7 +101,7 @@ class AccountHolderController {
         } else {
 
             $account = (new AccountHolderResource())->toArray($response);
-            return $httpResponse->setStatusCode(201)->response()->json($account);
+            return $httpResponse->setStatusCode(200)->response()->json($account);
         }
     }
 
@@ -125,18 +121,29 @@ class AccountHolderController {
         } else {
 
             $account = (new AccountHolderResource())->toArray($response);
-            return $httpResponse->setStatusCode(201)->response()->json($account);
+            return $httpResponse->setStatusCode(200)->response()->json($account);
         }
-
     }
 
     public function transferAccount(Request $request)
     {
-        echo 'transfer';
+        $request = $request->all();
+        isset($request['accountHolder']) ? $accountHolder_id  = (int) $request['accountHolder'] : $accountHolder_id = 0;
+        isset($request['numberAccount']) ? $numberAccount     = (int) $request['numberAccount'] : $numberAccount    = 0;
+        isset($request['value'])         ? $value  = (float) $request['value'] : $value = 0;
+
+       
+
+        $httpResponse = new Response();
+        $response = $this->accountHolder->accountTransfer($accountHolder_id, $numberAccount, $value);
+        if(isset($response['code'])){
+
+            $json = FromJson::fromJsonError($response['message'], $response['code']);
+            return $httpResponse->setStatusCode($response['code'])->response()->json($json);
+        } else {
+
+            $account = (new AccountHolderResource())->toArray($response);
+            return $httpResponse->setStatusCode(200)->response()->json($account);
+        }
     }
-
-
-
-    
-
 }

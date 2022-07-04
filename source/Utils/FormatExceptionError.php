@@ -2,9 +2,8 @@
 
 namespace Source\Utils;
 
-class FormatExceptionError {
-
-
+class FormatExceptionError 
+{
     /**
      * Formata as exceptiosn geradas completamente em um thows
      */

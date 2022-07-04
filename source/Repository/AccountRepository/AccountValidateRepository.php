@@ -11,8 +11,7 @@ class AccountValidateRepository extends AccountModel{
     public array $message;
     public bool $isValid;
 
-
-    public function validateAccount(int $accountHolder_id, array $address)
+    public function validateAccount(int $accountHolder_id, array $address) 
     {
         $this->validateFormAccount($accountHolder_id, $address);
         if ($this->isValid) {
@@ -22,7 +21,7 @@ class AccountValidateRepository extends AccountModel{
         }
     }
 
-    public function mountAccount()
+    public function mountAccount() : array
     {
         $array = array(
             'value' => $this->getValue(),

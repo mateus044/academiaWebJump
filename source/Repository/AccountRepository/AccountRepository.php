@@ -6,9 +6,8 @@ use Exception;
 use Source\Interfaces\AccountInterface\AccountInterface;
 use Source\Model\AccountModel;
 
-class AccountRepository extends AccountModel implements AccountInterface {
-
-
+class AccountRepository extends AccountModel implements AccountInterface 
+{
     public function checkAccount(int $accountHolder_id, array $data)
     {
         $accountValidateRepository = new AccountValidateRepository();
