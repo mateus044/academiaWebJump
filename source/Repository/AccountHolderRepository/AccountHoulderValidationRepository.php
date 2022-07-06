@@ -31,7 +31,6 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
     public function mountAccountHoulder() : array
     {
-
         $array = array(
             'name' => $this->getName(),
             'cpf'  => $this->getCpf(),
@@ -73,7 +72,6 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
             $this->isValid = true;
         }
     }
-
 
     /**
      * valida o campo name

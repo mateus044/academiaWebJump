@@ -4,12 +4,15 @@ namespace Source\Repository\AccountHolderRepository;
 
 use Exception;
 use Source\Interfaces\AccountHolderInterface\AccountHolderInterface;
+use Source\Logs\Logs;
 use Source\Model\AccountHolderModel;
 use Source\Model\AccountModel;
 use Source\Repository\AccountRepository\AccountRepository;
 use Source\Repository\AccountRepository\AccountUpdateRepository;
 use Source\Repository\AddressRepository\AddressRepository;
 use Source\Utils\FormatExceptionError;
+use Source\Utils\LevelLogs;
+use Source\Utils\MessageLogs;
 use Source\Utils\MessageValidation;
 
 class AccountHolderRepository extends AccountHolderModel implements AccountHolderInterface 
@@ -52,9 +55,12 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
           $chechCnpjAndCpf = $this->chechCnpjAndCpf($accountHoulderValidation); 
           $accountHolder = $this->create($accountHoulderValidation);
           $address       = $this->storageAddress($accountHolder->id, $data['address']);
+          $this->mountAccountHolderLog($accountHolder, MessageLogs::$accountHolderCreated, LevelLogs::DEBUG);
           return $accountHolder->load('address');
-        
+          
         } catch (Exception $e) {
+            
+            Logs::logAccountHolder(MessageLogs::$errorCreating ,$e->getMessage(), LevelLogs::ERROR);
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }
     }
@@ -87,7 +93,7 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
     }
 
     public function createAccount(int $accountHolder_id, array $data)
-    {
+    {  
         try {
             $accounReposioty = new AccountRepository();
             $accountHolder = $this->findAccountHolder($accountHolder_id);
@@ -95,6 +101,7 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
             return $accountHolder->load('account');
         } catch (Exception $e) {
        
+            Logs::logAccount(MessageLogs::$errorAccount,$e->getMessage(), LevelLogs::ERROR);
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }
     }
@@ -105,9 +112,11 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
             $accountHolder = new AccountHoulderFindRepository();
             $account = $accountHolder->getAccountHolder($accountHolder_id);
             $deposit = (new AccountUpdateRepository())->depositValue($account->account, $value); 
+            $this->mountAccountHolderLog($account, MessageLogs::$depositMade.':'.'value'.':'.$value  ,LevelLogs::DEBUG);
             return $account->load('account'); 
         } catch (Exception $e) {
             
+            Logs::logAccount(MessageLogs::$errorDeposit, $e->getMessage(), LevelLogs::ERROR);
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }
     }
@@ -119,9 +128,11 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
             $accountHolder = new AccountHoulderFindRepository();
             $account = $accountHolder->getAccountHolder($accountHolder_id);
             $deposit = (new AccountUpdateRepository())->withdrawValue($account->account, $value);
+            $this->mountAccountHolderLog($account, MessageLogs::$withdrawSuccessfully.':'.'value'.':'.$value  ,LevelLogs::DEBUG);
             return $account->load('account'); 
         } catch (Exception $e) {
             
+            Logs::logAccountHolder(MessageLogs::$errorWithdwaw, $e->getMessage(), LevelLogs::ERROR);
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }
     }
@@ -129,15 +140,38 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
     public function accountTransfer(int $accountHolder_id, int $numberAccount, float $value)
     {
         try {
-
+            
             $accountHolder = new AccountHoulderFindRepository();
             $account  = $accountHolder->getAccountHolder($accountHolder_id);
             $transfer = (new AccountUpdateRepository())->manageTransfer($account, $numberAccount, $value);
+            $this->mountAccountHolderLog($account, MessageLogs::$transferMade.':'.'value'.':'.$value. ':'.'for'.':'.$numberAccount  , LevelLogs::DEBUG);
             return $account->load('account'); 
-            
         } catch (Exception $e) {
             
+            $this->mountAccountHolderLog($account, MessageLogs::$errorWhenTransferring, LevelLogs::DEBUG);
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }
+    }
+
+    /**
+     * @param $accountHolder
+     * @param string $message
+     * @param string $level
+     * 
+     * @return bool
+     */
+    public function mountAccountHolderLog($accountHolder, $message, string $level) : bool
+    {   
+        if(!$accountHolder->cpf == null)
+        {
+            Logs::logAccountHolder($message, $accountHolder->cpf, $level);
+        }
+
+        if(!$accountHolder->cnpj == null)
+        {
+            Logs::logAccountHolder($message, $accountHolder->cnpj, $level);
+        }
+
+        return true;
     }
 }

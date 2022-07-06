@@ -4,7 +4,10 @@ namespace Source\Repository\AccountRepository;
 
 use Exception;
 use Source\Interfaces\AccountInterface\AccountInterface;
+use Source\Logs\Logs;
 use Source\Model\AccountModel;
+use Source\Utils\LevelLogs;
+use Source\Utils\MessageLogs;
 
 class AccountRepository extends AccountModel implements AccountInterface 
 {
@@ -24,6 +27,20 @@ class AccountRepository extends AccountModel implements AccountInterface
     {
         $account = $this->checkAccount($accountHolder_id, $data);
         $account = $this->create($account);
+        $this->mountAccountLog($account, MessageLogs::$accountCreated, LevelLogs::DEBUG);
         return true;        
+    }
+
+    /**
+     * @param $account
+     * @param int    $accountHolder_id
+     * @param string $level
+     * 
+     * @return bool
+     */
+    public function mountAccountLog($account, string $message, string $level) : bool
+    {   
+        Logs::logAccount($message,$account->accountHolder_id,$level);
+        return true;
     }
 }

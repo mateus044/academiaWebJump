@@ -11,6 +11,8 @@ use Source\Utils\MessageValidation;
 
 class AccountHoulderFindRepository extends AccountHolderModel implements AccountHoulderFindInterface {
 
+    private $accountHolderModelClass = AccountHolderModel::class;
+
     public function getAccountHolder(int $id)
     {   
         $accountHolder = $this->find($id);
@@ -29,5 +31,10 @@ class AccountHoulderFindRepository extends AccountHolderModel implements Account
         }
 
         return $accountHolder;
+    }
+
+    public function findAccountHolderWithoutAddress() 
+    {
+       //
     }
 }

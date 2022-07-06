@@ -28,7 +28,8 @@
         "erandir/plug-route": "^4.4",
         "illuminate/database":"^8.83.18",
         "illuminate/events": "^8.83",
-        "erandir/plug-http": "^2.0"
+        "erandir/plug-http": "^2.0",
+        "php-di/php-di": "^6.4"
         
     },
     "require-dev": {

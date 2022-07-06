@@ -1,0 +1,14 @@
+[2022-07-05T20:32:05.106788+00:00] logs.DEBUG: AccountHolderCreated {"accountHolderId":36} {"data":"20220705203205"}
+[2022-07-05T20:40:44.304141+00:00] logs.DEBUG: AccountHolderCreated {"accountHolderId":38} {"data":"20220705204044"}
+[2022-07-06T01:45:42.303842+00:00] logs.DEBUG: AccountHolderCreated {"user":39} {"data":"20220706014542"}
+[2022-07-06T01:45:43.476993+00:00] logs.DEBUG: AccountHolderCreated {"user":40} {"data":"20220706014543"}
+[2022-07-06T01:46:00.321144+00:00] logs.DEBUG: AccountHolderCreated {"user":41} {"data":"20220706014600"}
+[2022-07-06T01:46:06.762025+00:00] logs.DEBUG: AccountHolderCreated {"user":42} {"data":"20220706014606"}
+[2022-07-06T01:46:18.230030+00:00] logs.DEBUG: AccountHolderCreated {"user":43} {"data":"20220706014618"}
+[2022-07-06T01:46:19.059329+00:00] logs.DEBUG: AccountHolderCreated {"user":44} {"data":"20220706014619"}
+[2022-07-06T01:46:21.302885+00:00] logs.DEBUG: AccountHolderCreated {"user":45} {"data":"20220706014621"}
+[2022-07-06T01:46:22.039521+00:00] logs.DEBUG: AccountHolderCreated {"user":46} {"data":"20220706014622"}
+[2022-07-06T01:46:22.541622+00:00] logs.DEBUG: AccountHolderCreated {"user":47} {"data":"20220706014622"}
+[2022-07-06T01:46:22.938794+00:00] logs.DEBUG: AccountHolderCreated {"user":48} {"data":"20220706014622"}
+[2022-07-06T01:47:07.427266+00:00] logs.DEBUG: AccountHolderCreated {"user":49} {"data":"20220706014707"}
+[2022-07-06T01:47:08.218302+00:00] logs.DEBUG: AccountHolderCreated {"user":50} {"data":"20220706014708"}
