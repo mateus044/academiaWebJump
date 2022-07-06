@@ -24,6 +24,7 @@ class AccountHolderController
       $request = $request->all();
       isset($request['name'])      ? $name      = $request['name']      : $name      = null;
       isset($request['cpf'])       ? $cpf       = $request['cpf']       : $cpf       = null;
+      isset($request['password'])  ? $password  = $request['password']  : $password  = null;
       isset($request['cnpj'])      ? $cnpj      = $request['cnpj']      : $cnpj      = null;
       isset($request['rg'])        ? $rg        = $request['rg']        :  $rg       = null;
       isset($request['birthDate']) ? $birthDate = $request['birthDate'] : $birthDate = null;
@@ -36,6 +37,7 @@ class AccountHolderController
 
             'name' => $name,
             'cpf' => $cpf,
+            'password' => $password,
             'cnpj'=> $cnpj,
             'rg'  => $rg,
             'stateRegistration'=> $stateRegistration,

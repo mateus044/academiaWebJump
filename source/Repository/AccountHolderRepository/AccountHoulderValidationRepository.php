@@ -35,6 +35,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
             'name' => $this->getName(),
             'cpf'  => $this->getCpf(),
             'cnpj' => $this->getCnpj(),
+            'password' => $this->getPassword(),
             'rg'   => $this->getRg(),
             'stateRegistration' => $this->getStateRegistration(),
             'birthDate'         => $this->getBirthDate(),
@@ -51,6 +52,7 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
         $array['name']  = $this->_name($data);
         $array['cpf']   = $this->_cpf($data);
         $array['cnpj']  = $this->_cnpj($data);
+        $array['password'] = $this->_password($data);
         $array['rg']    = $this->_rg($data);
         $array['stateRegistration'] = $this->_stateRegistration($data);
         $array['birthDate']        = $this->_birthDate($data);
@@ -137,6 +139,30 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
 
         $this->setCnpj($cnpj['response']);
         return null;
+    }
+
+    /**
+     * valida o campo password
+     * @return string|null
+     */
+    private function _password($data)
+    {
+        if (is_null($data['password'])) {       
+            return MessageValidation::$required;
+        }
+
+        if (!is_string($data['password'])) {       
+            return MessageValidation::$onlyString;
+        }
+
+        $caracterNumber = strlen($data['password']);
+        if($caracterNumber < 3 ){
+            return MessageValidation::$minRequired;
+        }
+
+       $password =  password_hash($data['password'], PASSWORD_DEFAULT);
+       $this->setPassword($password);
+       return null;
     }
 
     /**

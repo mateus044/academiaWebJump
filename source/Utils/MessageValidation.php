@@ -4,6 +4,8 @@ namespace Source\Utils;
 
 class MessageValidation 
 {
+    
+    public static string $minRequired = "minimum number of characters is 3";
     public static string $onlyPositiveNumbers = "onlyPositiveNumbers";
     public static string $accountExists = "accountExists";
     public static string $accountNotExists = "accountNotExists";

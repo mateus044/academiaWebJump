@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
@@ -22,13 +23,14 @@ final class AccountHolders extends AbstractMigration
         $table->addColumn('name', 'string', ['limit' => 100])
             ->addColumn('cpf',  'string', ['limit' => 20, 'null' => true])
             ->addColumn('cnpj', 'string', ['limit' => 20, 'null' => true])
+            ->addColumn('password', 'string')
             ->addColumn('rg',   'string', ['limit' => 20])
-            ->addColumn('stateRegistration', 'string',['limit' => 30])
+            ->addColumn('stateRegistration', 'string', ['limit' => 30])
             ->addColumn('birthDate', 'string')
             ->addColumn('foundationDate', 'string')
             ->addColumn('cellphone', 'string', ['limit' => 20])
-            ->addColumn('updated_at', 'date',['null'=>true])
-            ->addColumn('created_at', 'date',['null'=>true])
+            ->addColumn('updated_at', 'date', ['null' => true])
+            ->addColumn('created_at', 'date', ['null' => true])
             ->create();
     }
 }

@@ -8,9 +8,10 @@ class AccountHolderModel  extends Model
 {
 
     protected $table = 'account_holders';
-    protected $fillable = ['name','cpf','cnpj','rg','stateRegistration','birthDate','foundationDate','cellphone'];
+    protected $fillable = ['name','cpf','cnpj','password','rg','stateRegistration','birthDate','foundationDate','cellphone'];
 
     private string $name;
+    private string $password;
     private string $rg;
     private string $stateRegistration;
     private string $birthDate;
@@ -33,6 +34,11 @@ class AccountHolderModel  extends Model
     public function getCnpj()
     {
         return $this->cnpj;
+    }
+
+    public function getPassword()
+    {
+        return $this->password;
     }
 
     public function getRg()
@@ -63,6 +69,11 @@ class AccountHolderModel  extends Model
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    public function setPassword($password)
+    {
+        $this->password = $password;
     }
 
     public function setCpf($cpf)
@@ -109,5 +120,4 @@ class AccountHolderModel  extends Model
     {
         return $this->hasOne(AccountModel::class, 'accountHolder_id');
     }
-
 }

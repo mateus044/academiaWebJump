@@ -42,3 +42,78 @@
 [2022-07-06T01:47:30.047722+00:00] logs.DEBUG: DepositMadeSuccessfully:value:10.98 {"user":"45051024084"} {"data":"20220706014730"}
 [2022-07-06T01:47:51.548655+00:00] logs.DEBUG: DepositMadeSuccessfully:value:10.98 {"user":"45051024084"} {"data":"20220706014751"}
 [2022-07-06T01:47:57.983379+00:00] logs.DEBUG: DepositMadeSuccessfully:value:10.98 {"user":"45051024084"} {"data":"20220706014757"}
+[2022-07-06T13:01:15.839848+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706130115"}
+[2022-07-06T13:01:16.718899+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706130116"}
+[2022-07-06T13:01:17.313060+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706130117"}
+[2022-07-06T13:02:30.539793+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706130230"}
+[2022-07-06T13:03:15.128486+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706130315"}
+[2022-07-06T13:04:22.348990+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706130422"}
+[2022-07-06T13:04:33.827786+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706130433"}
+[2022-07-06T13:04:50.296726+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706130450"}
+[2022-07-06T13:34:56.585176+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"onlyString\"}"} {"data":"20220706133456"}
+[2022-07-06T13:34:57.395450+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"onlyString\"}"} {"data":"20220706133457"}
+[2022-07-06T13:35:32.659721+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"required\"}"} {"data":"20220706133532"}
+[2022-07-06T13:36:25.606891+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"onlyString\"}"} {"data":"20220706133625"}
+[2022-07-06T13:36:47.750345+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"onlyString\"}"} {"data":"20220706133647"}
+[2022-07-06T13:36:48.575432+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"onlyString\"}"} {"data":"20220706133648"}
+[2022-07-06T13:36:52.719385+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"onlyString\"}"} {"data":"20220706133652"}
+[2022-07-06T13:36:53.526273+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"onlyString\"}"} {"data":"20220706133653"}
+[2022-07-06T13:37:13.166031+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133713"}
+[2022-07-06T13:37:46.708764+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706133746"}
+[2022-07-06T13:37:56.813380+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133756"}
+[2022-07-06T13:38:08.244742+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133808"}
+[2022-07-06T13:38:15.944939+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133815"}
+[2022-07-06T13:38:16.872693+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133816"}
+[2022-07-06T13:38:20.419764+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133820"}
+[2022-07-06T13:38:21.134643+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133821"}
+[2022-07-06T13:38:29.836531+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133829"}
+[2022-07-06T13:38:30.639839+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706133830"}
+[2022-07-06T13:38:58.898727+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706133858"}
+[2022-07-06T13:39:11.229035+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706133911"}
+[2022-07-06T13:39:11.839429+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706133911"}
+[2022-07-06T13:39:18.672014+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706133918"}
+[2022-07-06T13:40:43.717865+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134043"}
+[2022-07-06T13:40:50.331788+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134050"}
+[2022-07-06T13:40:52.384470+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134052"}
+[2022-07-06T13:40:54.324540+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134054"}
+[2022-07-06T13:40:56.698355+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134056"}
+[2022-07-06T13:41:02.418459+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134102"}
+[2022-07-06T13:41:12.364340+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134112"}
+[2022-07-06T13:41:16.566027+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134116"}
+[2022-07-06T13:41:18.356430+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134118"}
+[2022-07-06T13:41:20.940823+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134120"}
+[2022-07-06T13:41:22.970041+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134122"}
+[2022-07-06T13:42:12.844154+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134212"}
+[2022-07-06T13:42:15.643917+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134215"}
+[2022-07-06T13:42:19.015780+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134219"}
+[2022-07-06T13:42:43.299178+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134243"}
+[2022-07-06T13:42:49.195926+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706134249"}
+[2022-07-06T13:42:51.772720+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706134251"}
+[2022-07-06T13:42:53.440360+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134253"}
+[2022-07-06T13:42:55.292850+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134255"}
+[2022-07-06T13:42:56.812747+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706134256"}
+[2022-07-06T13:43:41.988236+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706134341"}
+[2022-07-06T13:43:46.068436+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706134346"}
+[2022-07-06T13:43:49.142355+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706134349"}
+[2022-07-06T13:44:19.656615+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"required\"}"} {"data":"20220706134419"}
+[2022-07-06T13:44:22.788481+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706134422"}
+[2022-07-06T13:44:27.057260+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"onlyString\"}"} {"data":"20220706134427"}
+[2022-07-06T13:44:29.486805+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706134429"}
+[2022-07-06T13:59:15.816234+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706135915"}
+[2022-07-06T13:59:23.621226+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706135923"}
+[2022-07-06T13:59:24.176507+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706135924"}
+[2022-07-06T14:01:03.976489+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706140103"}
+[2022-07-06T14:01:04.650068+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706140104"}
+[2022-07-06T14:01:05.254288+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706140105"}
+[2022-07-06T14:02:45.458706+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706140245"}
+[2022-07-06T14:02:58.795240+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706140258"}
+[2022-07-06T14:03:04.560957+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706140304"}
+[2022-07-06T14:03:58.710744+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706140358"}
+[2022-07-06T14:04:10.899104+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706140410"}
+[2022-07-06T14:23:10.086686+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706142310"}
+[2022-07-06T14:45:06.390029+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"password\":\"minimum number of characters is 3\"}"} {"data":"20220706144506"}
+[2022-07-06T14:45:12.800502+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706144512"}
+[2022-07-06T14:45:25.132768+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706144525"}
+[2022-07-06T14:45:28.671311+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706144528"}
+[2022-07-06T14:46:30.612405+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706144630"}
+[2022-07-06T14:46:42.124603+00:00] logs.DEBUG: AccountHolderCreated {"user":"45051024084"} {"data":"20220706144642"}
