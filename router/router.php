@@ -6,7 +6,6 @@ $middlewares = [
     \Source\Middlewares\Auth::class
 ];
 
-
 $route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers', 'middlewares'=>$middlewares], function($route){
     $route->post('/storage','\\AccountHolderController@storageAccount');
     $route->post('/transfer','\\AccountHolderController@transferAccount');

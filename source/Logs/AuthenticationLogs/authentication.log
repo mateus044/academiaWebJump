@@ -3,3 +3,21 @@
 [2022-07-07T19:01:42.935341+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707190142"}
 [2022-07-07T19:01:43.133414+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707190143"}
 [2022-07-07T19:01:43.272296+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707190143"}
+[2022-07-07T19:40:23.517831+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707194023"}
+[2022-07-07T19:40:58.071647+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707194058"}
+[2022-07-07T19:45:50.710724+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707194550"}
+[2022-07-07T19:46:14.425565+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707194614"}
+[2022-07-07T19:46:36.949239+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707194636"}
+[2022-07-07T19:46:55.832844+00:00] logs.DEBUG: UserLogged {"user":"35748703000187"} {"data":"20220707194655"}
+[2022-07-07T20:03:34.705277+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"\"kid\" empty, unable to lookup correct key"} {"data":"20220707200334"}
+[2022-07-07T20:06:04.771808+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"\"kid\" empty, unable to lookup correct key"} {"data":"20220707200604"}
+[2022-07-07T20:06:37.439924+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"\"kid\" empty, unable to lookup correct key"} {"data":"20220707200637"}
+[2022-07-07T20:07:43.534473+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"\"kid\" empty, unable to lookup correct key"} {"data":"20220707200743"}
+[2022-07-07T20:08:19.121158+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"\"kid\" empty, unable to lookup correct key"} {"data":"20220707200819"}
+[2022-07-07T20:08:19.967538+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"\"kid\" empty, unable to lookup correct key"} {"data":"20220707200819"}
+[2022-07-07T20:16:10.210746+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"\"kid\" empty, unable to lookup correct key"} {"data":"20220707201610"}
+[2022-07-07T20:16:40.533364+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"\"kid\" empty, unable to lookup correct key"} {"data":"20220707201640"}
+[2022-07-07T20:37:35.692734+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"Call to undefined method Source\\Repository\\AuthenticationRepository\\AuthenticationRepository::testAuthentication()"} {"data":"20220707203735"}
+[2022-07-07T20:40:09.378364+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"Call to undefined method Source\\Repository\\AuthenticationRepository\\AuthenticationRepository::testAuthentication()"} {"data":"20220707204009"}
+[2022-07-07T20:58:32.007815+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"login\":\"invalidLogin\",\"password\":\"123456\"}"} {"data":"20220707205832"}
+[2022-07-07T20:58:44.093404+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"login\":\"invalidLogin\",\"password\":\"123456\"}"} {"data":"20220707205844"}

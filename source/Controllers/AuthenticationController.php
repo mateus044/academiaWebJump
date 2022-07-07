@@ -34,7 +34,7 @@ class AuthenticationController
             return $httpResponse->setStatusCode($response['code'])->response()->json($json);
 
         } else {
-
+            
             $error = (new AuthenticationLoginResource())->toArray($response);
             return $httpResponse->setStatusCode(201)->response()->json($error);
         }

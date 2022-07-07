@@ -36,7 +36,8 @@ class AuthenticationRepository extends AccountHolderModel implements Authenticat
             throw new Exception(json_encode($error),406);
         }
 
-        return $accountHolder;
+        $token = $this->Authentication($accountHolder);
+        return $token;
     }
 
     public function login(string $login, string $passowrd)
@@ -45,7 +46,8 @@ class AuthenticationRepository extends AccountHolderModel implements Authenticat
             $credentiais = $this->authenticarFields($login, $passowrd);
             $accountHolder = (new AuthenticationFindRepository())->findUser($credentiais);
             $accountHolder = $this->validAccountHolderPassword($accountHolder, $credentiais['password']);
-            $this->mountAuthenticationLog($accountHolder, MessageValidation::$userLogged, LevelLogs::DEBUG);
+            
+            //$this->mountAuthenticationLog($accountHolder, MessageValidation::$userLogged, LevelLogs::DEBUG);
             return $accountHolder;            
         } catch (Exception $e) {
 

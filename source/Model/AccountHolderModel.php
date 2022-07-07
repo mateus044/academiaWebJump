@@ -124,22 +124,41 @@ class AccountHolderModel  extends Model
         return $this->hasOne(AccountModel::class, 'accountHolder_id');
     }
     
-    public function testAuthentication()
-    {
+    public function Authentication(AccountHolderModel $accountHolderModel)
+    {      
         $key = 'example_key';
-        $payload = [
-            'iss' => 'http://example.org',
-            'aud' => 'http://example.com',
-            'iat' => 1356999524,
-            'nbf' => 1357000000
-        ];
+        if(!is_null($accountHolderModel['cpf']))
+        {   
+            $payload = [
+                'iss' => 'http://example.org',
+                'aud' => 'http://example.com',
+                'iat' => 1356999524,
+                'nbf' => 1357000000,
+                'user'              => $accountHolderModel['cpf'],
+                'rg'                => $accountHolderModel['cellphone'],
+                'stateRegistration' => $accountHolderModel['cellphone'],
+                'birthDate'      => $accountHolderModel['cellphone'],
+                'foundationDate' => $accountHolderModel['cellphone'],
+                'cellphone'      => $accountHolderModel['cellphone']
+            ];
+        }
 
+        if(!is_null($accountHolderModel['cnpj']))
+        {   
+            $payload = [
+                'iss' => 'http://example.org',
+                'aud' => 'http://example.com',
+                'iat' => 1356999524,
+                'nbf' => 1357000000,
+                'user'              => $accountHolderModel['cnpj'],
+                'rg'                => $accountHolderModel['cellphone'],
+                'stateRegistration' => $accountHolderModel['cellphone'],
+                'birthDate'      => $accountHolderModel['cellphone'],
+                'foundationDate' => $accountHolderModel['cellphone'],
+                'cellphone'      => $accountHolderModel['cellphone']
+            ];
+        }
         $jwt = JWT::encode($payload, $key, 'HS256');
-        $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
-
-        $decoded_array = (array) $decoded;
-
-        JWT::$leeway = 60; // $leeway in seconds
-        $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
+        return $jwt;
     }
 }
