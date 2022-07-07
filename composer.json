@@ -29,7 +29,8 @@
         "illuminate/database":"^8.83.18",
         "illuminate/events": "^8.83",
         "erandir/plug-http": "^2.0",
-        "php-di/php-di": "^6.4"
+        "php-di/php-di": "^6.4",
+        "firebase/php-jwt": "^6.2"
         
     },
     "require-dev": {

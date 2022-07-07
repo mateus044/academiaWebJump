@@ -4,6 +4,9 @@ namespace Source\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+
 class AccountHolderModel  extends Model
 {
 
@@ -119,5 +122,24 @@ class AccountHolderModel  extends Model
     public function account()
     {
         return $this->hasOne(AccountModel::class, 'accountHolder_id');
+    }
+    
+    public function testAuthentication()
+    {
+        $key = 'example_key';
+        $payload = [
+            'iss' => 'http://example.org',
+            'aud' => 'http://example.com',
+            'iat' => 1356999524,
+            'nbf' => 1357000000
+        ];
+
+        $jwt = JWT::encode($payload, $key, 'HS256');
+        $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
+
+        $decoded_array = (array) $decoded;
+
+        JWT::$leeway = 60; // $leeway in seconds
+        $decoded = JWT::decode($jwt, new Key($key, 'HS256'));
     }
 }

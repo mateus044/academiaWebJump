@@ -10,7 +10,7 @@ use Source\Utils\LevelLogs;
 
 class Logs
 {
-    public static function logAccountHolder(string $mensagem, $user, string $modo)
+    public static function logAccountHolder(string $mensagem, $user, string $modo=LevelLogs::DEBUG)
     {
         $logger = new Logger('logs');
         $logger->pushHandler(new BrowserConsoleHandler(Logger::DEBUG));
@@ -94,11 +94,49 @@ class Logs
         }
     }
 
-    public static function logAddress(string $mensagem, $address, string $modo = 'info')
+    public static function logAddress(string $mensagem, $address, string $modo = LevelLogs::DEBUG)
     {
         $logger = new Logger('logs');
         $logger->pushHandler(new BrowserConsoleHandler(Logger::DEBUG));
         $logger->pushHandler(new StreamHandler(dirname(__FILE__) . '/../Logs/AddressLogs/address.log'));
+        $logger->pushProcessor(function($record){
+            $record["extra"]["data"] =  (date("YmdHis"));
+            return $record;
+        });
+
+        switch ($modo) {
+
+            case 'info':
+                $logger->info($mensagem, ["user" => $address]);
+                break;
+
+            case 'error':
+                $logger->error($mensagem, ["user" => $address]);
+                break;
+
+            case 'critical':
+                $logger->critical($mensagem, ["user" => $address]);
+                break;
+
+            case 'alert':
+                $logger->alert($mensagem, ["user" => $address]);
+                break;
+
+            case 'debug':
+               
+                $logger->debug($mensagem,["user" => $address]);
+                break;
+
+            default:
+                $logger->info($mensagem, ["user" => $address]);
+        }
+    }
+
+    public static function logAuthentication(string $mensagem, $address, string $modo = LevelLogs::DEBUG)
+    {
+        $logger = new Logger('logs');
+        $logger->pushHandler(new BrowserConsoleHandler(Logger::DEBUG));
+        $logger->pushHandler(new StreamHandler(dirname(__FILE__) . '/../Logs/AuthenticationLogs/authentication.log'));
         $logger->pushProcessor(function($record){
             $record["extra"]["data"] =  (date("YmdHis"));
             return $record;

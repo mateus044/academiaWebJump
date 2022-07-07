@@ -15,6 +15,12 @@ $route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers
     $route->post('/createAccount','\\AccountHolderController@createAccount');    
 });
 
+$route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers', 'middlewares'=>$middlewares], function($route){
+    $route->post('/login','\\AuthenticationController@login');
+    $route->post('/logout','\\AuthenticationController@logout');  
+});
+
+
 $route->notFound(function(){
     echo 'Rota não encontrada.';
 });

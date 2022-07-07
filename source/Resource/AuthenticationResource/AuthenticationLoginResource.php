@@ -1,10 +1,8 @@
 <?php
 
-namespace Source\Resource\AccountHolderResource;
+namespace Source\Resource\AuthenticationResource;
 
-use Source\Resource\AddressResource\AddressCreateResource;
-
-class AccountHolderCreateResource 
+class AuthenticationLoginResource 
 {
     /**
      * standardizes the successful return of the account holder
@@ -21,9 +19,9 @@ class AccountHolderCreateResource
             'birthDate'      => $request->birthDate,
             'foundationDate' => $request->foundationDate,
             'cellphone'      => $request->cellphone,
-            'addres'         => (new AddressCreateResource())->toArray($request->address)
+            'status'        => 'logged'
         );
 
         return $array;        
-    }
+    } 
 }

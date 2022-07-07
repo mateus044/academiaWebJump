@@ -10,9 +10,8 @@ class ValidateCnpj
 
     private $accountHolders = AccountHolderModel::class;
 
-
     /**
-     * Valida o CNPJ informado.
+     * Validate the entered cnpj
      * @param string $cnpj
      * @return string
      */
@@ -42,24 +41,23 @@ class ValidateCnpj
         }
 
         $resto = $soma % 11;
-        $getCnpj = $this->getCnpj($cnpj);
-
-        if (!empty($getCnpj)) 
-        {
-            return MessageValidation::$cnpjExists;
-        }
-        
         return ['message' => 'true', 'response' => $cnpj];
         //return $cnpj[13] == ($resto < 2 ? 0 : 11 - $resto);
     }
 
     /**
+     * checks the existence of a cnpj in the database
      * @param int $cnpj
      * @return $cnpj|null
      */
     public function getCnpj(int $cnpj)
     {
         $cnpj = $this->accountHolders::where('cnpj', '=', $cnpj)->first();
+        if(!is_null($cnpj))
+        {
+            return MessageValidation::$cnpjExists; 
+        }
+        
         return $cnpj;
     }
 }

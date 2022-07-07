@@ -76,7 +76,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo name
+     * validate the name field
+     * @param array $data
      * @return string|null
      */
     private function _name($data)
@@ -94,7 +95,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo cpf
+     * validate the cpf field
+     * @param array $data
      * @return string|null
      */
     private function _cpf($data)
@@ -107,10 +109,16 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
             return MessageValidation::$onlyString;
         }
 
-        $cpf = (new ValidateCpf())->validarCPF($data['cpf']);
-
+        $validateCpf = new ValidateCpf();
+        $cpf = $validateCpf->validarCPF($data['cpf']);
+        
         if (!is_array($cpf)) {
             return $cpf;
+        }
+
+        $getCPF = $validateCpf->getCPF($cpf['response']);
+        if(is_string($getCPF)){
+            return $getCPF;
         }
 
         $this->setCpf($cpf['response']);
@@ -118,7 +126,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo cnpj
+     * validate the cnpj field
+     * @param array $data
      * @return string|null
      */
     private function _cnpj($data)
@@ -131,10 +140,15 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
             return MessageValidation::$onlyString;
         }
 
-        $cnpj = (new ValidateCnpj())->validarCnpj($data['cnpj']);
+        $validateCnpj = new ValidateCnpj();
+        $cnpj = $validateCnpj->validarCnpj($data['cnpj']);
         if (!is_array($cnpj)) {
-
             return $cnpj;
+        }
+
+        $getCnpj = $validateCnpj->getCnpj($cnpj['response']);
+        if(is_string($getCnpj)){
+            return $getCnpj;
         }
 
         $this->setCnpj($cnpj['response']);
@@ -142,7 +156,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo password
+     * validate the password field
+     * @param array $data
      * @return string|null
      */
     private function _password($data)
@@ -166,7 +181,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo rg
+     * validate the rg field
+     * @param array $data
      * @return string|null
      */
     private function _rg($data)
@@ -184,7 +200,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo stateRegistration
+     * validate the stateRegistration field
+     * @param array $data
      * @return string|null
      */
     private function _stateRegistration($data)
@@ -204,7 +221,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo birthDate
+     * validate the birthDate field
+     * @param array $data
      * @return string|null
      */
     private function _birthDate($data)
@@ -223,7 +241,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo foundationDate
+     * validate the foundationDate field
+     * @param array $data
      * @return string|null
      */
     private function _foundationDate($data)
@@ -242,7 +261,8 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
     }
 
     /**
-     * valida o campo cellphone
+     * validate the cellphone field
+     * @param array $data
      * @return string|null
      */
     private function _cellphone($data)

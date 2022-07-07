@@ -148,4 +148,5 @@ class AccountHolderController
             return $httpResponse->setStatusCode(200)->response()->json($account);
         }
     }
+
 }

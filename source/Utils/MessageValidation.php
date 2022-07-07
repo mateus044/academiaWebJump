@@ -2,9 +2,12 @@
 
 namespace Source\Utils;
 
-class MessageValidation 
+class MessageValidation
 {
-    
+    public static string $userLogged = "UserLogged";
+    public static string $invalidCredentiais = "Username or password is invalid";
+    public static string $userDoesNotExist = "User does not exist";
+    public static string $invalidLogin = "invalidLogin";
     public static string $minRequired = "minimum number of characters is 3";
     public static string $onlyPositiveNumbers = "onlyPositiveNumbers";
     public static string $accountExists = "accountExists";

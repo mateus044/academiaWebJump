@@ -12,7 +12,7 @@ class ValidateCpf {
     private $accountHolders = AccountHolderModel::class;
 
     /**
-    * Valida o CPF informado.
+    * Validate the entered cpf
     * @param string $cpf
     * @return $cpf|string
     */
@@ -38,24 +38,22 @@ class ValidateCpf {
             }
         }
 
-        $getCPF = $this->getCPF($cpf);
-
-        if(!empty($getCPF))
-        {
-            return MessageValidation::$cpfExists;
-        }
-        
         return ['message' => 'true', 'response' => $cpf];
     }
 
     /**
+     * checks the existence of a cpf in the database
      * @param int $cpf
      * @return $cpf|null
      */
     public function getCPF(int $cpf)
     {   
         $cpf = $this->accountHolders::where('cpf','=', $cpf)->first();
-        //return $cpf;
-        return null;
+        if(!is_null($cpf))
+        {
+            return MessageValidation::$cpfExists; 
+        }
+
+        return true;
     }
 }
