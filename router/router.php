@@ -1,9 +1,10 @@
 <?php
 
+
 $route = \PlugRoute\RouteFactory::create();
 
 $middlewares = [
-    \Source\Middlewares\Auth::class
+    \Source\Middlewares\JWTAuth::class
 ];
 
 $route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers', 'middlewares'=>$middlewares], function($route){
@@ -14,7 +15,7 @@ $route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers
     $route->post('/createAccount','\\AccountHolderController@createAccount');    
 });
 
-$route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers', 'middlewares'=>$middlewares], function($route){
+$route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers'], function($route){
     $route->post('/login','\\AuthenticationController@login');
     $route->post('/logout','\\AuthenticationController@logout');  
 });

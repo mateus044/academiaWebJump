@@ -45,3 +45,9 @@
 [2022-07-05T21:06:47.616481+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220705210647"}
 [2022-07-06T01:47:20.124655+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220706014720"}
 [2022-07-06T13:35:24.998417+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220706133524"}
+[2022-07-08T17:04:25.236941+00:00] logs.DEBUG: AccountCreated {"user":2} {"data":"20220708170425"}
+[2022-07-08T17:04:30.256171+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220708170430"}
+[2022-07-08T18:23:32.076271+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220708182332"}
+[2022-07-08T18:23:32.685348+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220708182332"}
+[2022-07-08T18:24:50.301600+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220708182450"}
+[2022-07-08T18:24:51.024481+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220708182451"}

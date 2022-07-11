@@ -2,10 +2,11 @@
 
 require __DIR__."../../vendor/autoload.php";
 
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Events\Dispatcher;
-use Illuminate\Container\Container;
-$capsule = new Capsule();
+use \Illuminate\Container\Container as Container;
+
+$capsule = new DB();
 
 $config = [
 
@@ -24,3 +25,4 @@ $capsule->getConnection();
 $capsule->setEventDispatcher(new Dispatcher(new Container));
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
+
