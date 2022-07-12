@@ -2,54 +2,38 @@
 
 namespace Source\Controllers;
 
-use PlugRoute\Http\Request;
-use PlugHttp\Response;
 use Source\Repository\AccountHolderRepository\AccountHolderRepository;
 use Source\Resource\AccountHolderResource\AccountHolderCreateResource;
 use Source\Resource\AccountHolderResource\AccountHolderResource;
+use PlugHttp\Response;
 use Source\Utils\FromJson;
+use Pecee\Http\Request;
 
-class AccountHolderController 
+class AccountHolderController
 {
 
-    private $accountHolder;
-
-    public function __construct(AccountHolderRepository $accountHolder) 
+    public function storageAccount()
     {
-        $this->accountHolder = $accountHolder;
-    }
-
-    public function storageAccount(Request $request)
-    {
-      $request = $request->all();
-      isset($request['name'])      ? $name      = $request['name']      : $name      = null;
-      isset($request['cpf'])       ? $cpf       = $request['cpf']       : $cpf       = null;
-      isset($request['password'])  ? $password  = $request['password']  : $password  = null;
-      isset($request['cnpj'])      ? $cnpj      = $request['cnpj']      : $cnpj      = null;
-      isset($request['rg'])        ? $rg        = $request['rg']        :  $rg       = null;
-      isset($request['birthDate']) ? $birthDate = $request['birthDate'] : $birthDate = null;
-      isset($request['cellphone']) ? $cellphone = $request['cellphone'] : $cellphone = null;
-      isset($request['address'])   ? $address   = $request['address']   : $address   = null;
-      isset($request['stateRegistration']) ? $stateRegistration = $request['stateRegistration'] : $stateRegistration = null;
-      isset($request['foundationDate'])    ? $foundationDate    = $request['foundationDate']    : $foundationDate    = null;
-
+        $request  = new Request();
+        $address  = $request->getInputHandler()->value('address');
         $array = array(
 
-            'name' => $name,
-            'cpf' => $cpf,
-            'password' => $password,
-            'cnpj'=> $cnpj,
-            'rg'  => $rg,
-            'stateRegistration'=> $stateRegistration,
-            'birthDate'      => $birthDate,
-            'foundationDate' => $foundationDate,
-            'cellphone' => $cellphone,
-            'address'  => $address
+            'name'              => $request->getInputHandler()->value('name'),
+            'cpf'               => $request->getInputHandler()->value('cpf'),
+            'password'          => $request->getInputHandler()->value('password'),
+            'cnpj'              => $request->getInputHandler()->value('cnpj'),
+            'rg'                => $request->getInputHandler()->value('rg'),
+            'stateRegistration' => $request->getInputHandler()->value('stateRegistration'),
+            'birthDate'         => $request->getInputHandler()->value('birthDate'),
+            'foundationDate'    => $request->getInputHandler()->value('foundationDate'),
+            'cellphone'         => $request->getInputHandler()->value('cellphone'),
+            'address'           => is_null($address)  ? $address = [] : $address = $address
         );
 
-        $httpResponse = new Response();
-        $response = $this->accountHolder->storageAccountHolder($array);
-        if(isset($response['code'])){
+        $httpResponse  = new Response();
+        $accountHolder = new AccountHolderRepository();
+        $response = $accountHolder->storageAccountHolder($array);
+        if (isset($response['code'])) {
 
             $json = FromJson::fromJsonError($response['message'], $response['code']);
             return $httpResponse->setStatusCode($response['code'])->response()->json($json);
@@ -60,43 +44,49 @@ class AccountHolderController
         }
     }
 
-    public function createAccount(Request $request)
+    public function createAccount()
     {
-        $request = $request->all();
-        isset($request['accountHolder']) ? $accountHolder_id = $request['accountHolder'] : $accountHolder_id = 0;
-        isset($request['value']) ? $value = $request['value'] : $value = 0;
+        $request = new Request();    
+        $accountHolder_id = $request->getInputHandler()->value('accountHolder');
+        $value            = $request->getInputHandler()->value('value');
+
+        is_null($accountHolder_id) ? $accountHolder_id = 0 : $accountHolder_id = $accountHolder_id;
+        is_null($value) ? $value = 0 : $value = $value;
 
         $array = array(
-
             'value' => $value,
-            'number'=> null,
+            'number' => null,
             'accountHolder_id' => null
         );
 
         $httpResponse = new Response();
-        $response = $this->accountHolder->createAccount($accountHolder_id, $array);
-    
-        if(isset($response['code'])){
-            
+        $accountHolder = new AccountHolderRepository();
+        $response = $accountHolder->createAccount($accountHolder_id, $array);
+        if (isset($response['code'])) {
+
             $json = FromJson::fromJsonError($response['message'], $response['code']);
             return $httpResponse->setStatusCode($response['code'])->response()->json($json);
         } else {
-            
+
             $account = (new AccountHolderResource())->toArray($response);
-            return $httpResponse->setStatusCode(201)->response()->json($account);      
+            return $httpResponse->setStatusCode(201)->response()->json($account);
         }
     }
 
-    public function depositAccount(Request $request)
+    public function depositAccount()
     {
-        $request = $request->all();
-        isset($request['accountHolder']) ? $accountHolder_id = $request['accountHolder'] : $accountHolder_id = 0;
-        isset($request['value']) ? $value = $request['value'] : $value = 0;
+        $request = new Request();
+        $accountHolder_id = $request->getInputHandler()->value('accountHolder');
+        $value            = $request->getInputHandler()->value('value');
 
-        $httpResponse = new Response();
-        $response = $this->accountHolder->accountDeposit($accountHolder_id, $value);
+        is_null($accountHolder_id) ? $accountHolder_id = 0 :  $accountHolder_id = $accountHolder_id;
+        is_null($value) ? $value = 0 : $value = $value;
 
-        if(isset($response['code'])){
+        $httpResponse  = new Response();
+        $accountHolder = new AccountHolderRepository();
+        $response = $accountHolder->accountDeposit($accountHolder_id, $value);
+
+        if (isset($response['code'])) {
 
             $json = FromJson::fromJsonError($response['message'], $response['code']);
             return $httpResponse->setStatusCode($response['code'])->response()->json($json);
@@ -109,14 +99,18 @@ class AccountHolderController
 
     public function withdrawAccount(Request $request)
     {
-        $request = $request->all();
-        isset($request['accountHolder']) ? $accountHolder_id = $request['accountHolder'] : $accountHolder_id = 0;
-        isset($request['value']) ? $value = $request['value'] : $value = 0;
+        $request = new Request();
+        $accountHolder_id = $request->getInputHandler()->value('accountHolder');
+        $value            = $request->getInputHandler()->value('value');
 
-        $httpResponse = new Response();
-        $response = $this->accountHolder->accountWithdraw($accountHolder_id, $value);
+        is_null($accountHolder_id) ? $accountHolder_id = 0 : $accountHolder_id = $accountHolder_id;
+        is_null($value)  ? $value  = 0  : $value = $value;
 
-        if(isset($response['code'])){
+        $httpResponse  = new Response();
+        $accountHolder = new AccountHolderRepository();
+        $response = $accountHolder->accountWithdraw($accountHolder_id, $value);
+
+        if (isset($response['code'])) {
 
             $json = FromJson::fromJsonError($response['message'], $response['code']);
             return $httpResponse->setStatusCode($response['code'])->response()->json($json);
@@ -127,18 +121,22 @@ class AccountHolderController
         }
     }
 
-    public function transferAccount(Request $request)
+    public function transferAccount()
     {
-        $request = $request->all();
-        isset($request['accountHolder']) ? $accountHolder_id  = (int) $request['accountHolder'] : $accountHolder_id = 0;
-        isset($request['numberAccount']) ? $numberAccount     = (int) $request['numberAccount'] : $numberAccount    = 0;
-        isset($request['value'])         ? $value  = (float) $request['value'] : $value = 0;
+        $request = new Request();
+        $accountHolder_id  = $request->getInputHandler()->value('accountHolder');
+        $numberAccount     = $request->getInputHandler()->value('numberAccount');
+        $value             = $request->getInputHandler()->value('value');
 
-       
+        is_null($accountHolder_id) ? $accountHolder_id = 0 : $accountHolder_id = $accountHolder_id;
+        is_null($numberAccount)    ? $numberAccount = 0    : $numberAccount    = $numberAccount;
+        is_null($value)            ? $value         = 0    : $value            = $value;
 
-        $httpResponse = new Response();
-        $response = $this->accountHolder->accountTransfer($accountHolder_id, $numberAccount, $value);
-        if(isset($response['code'])){
+        $httpResponse  = new Response();
+        $accountHolder = new AccountHolderRepository();
+        $response      = $accountHolder->accountTransfer($accountHolder_id, $numberAccount, $value);
+
+        if (isset($response['code'])) {
 
             $json = FromJson::fromJsonError($response['message'], $response['code']);
             return $httpResponse->setStatusCode($response['code'])->response()->json($json);
@@ -149,4 +147,11 @@ class AccountHolderController
         }
     }
 
+    public function invalidToken()
+    {
+        $accountHolder = new AccountHolderRepository();
+        $httpResponse  = new Response();
+        $response = $accountHolder->invalidToken();
+        return $httpResponse->setStatusCode($response['code'])->response()->json($response);
+    }
 }

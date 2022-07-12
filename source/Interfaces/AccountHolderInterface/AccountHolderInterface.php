@@ -5,6 +5,7 @@ namespace Source\Interfaces\AccountHolderInterface;
 
 interface AccountHolderInterface 
 {  
+    public function invalidToken();
     public function chechCnpjAndCpf(array $data);
     public function checkAccountHolder(array $data);
     public function storageAccountHolder(array $data);

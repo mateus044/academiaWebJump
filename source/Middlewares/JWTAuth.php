@@ -2,23 +2,21 @@
 
 namespace Source\Middlewares;
 
-use Source\Middlewares\Auth;
-use PlugHttp\Request;
-use PlugRoute\Middleware\PlugRouteMiddleware;
-use Source\Utils\FormatExceptionError;
-use Source\Utils\MessageValidation;
+use Pecee\Http\Middleware\IMiddleware;
+use Pecee\Http\Request;
 
-class JWTAuth implements PlugRouteMiddleware
+class JWTAuth implements IMiddleware
 {
-    public function handler(Request $request) 
-    {   
+    public function handle(Request $request): void
+    {
         try {
             $auth  = new Auth();
-            return $auth->authorization();
-        } catch (\Throwable $e) {
-           
-            $error = FormatExceptionError::exceptionError(MessageValidation::$invalidToken);
-            return $error;
+            $token = $auth->authorization();
+            if ($token == false) {
+                $request->setRewriteUrl('/accountholder');
+            }
+        } catch (\Throwable $th) {
+            $request->setRewriteUrl('/accountholder');
         }
     }
 }

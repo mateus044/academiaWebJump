@@ -83,3 +83,8 @@
 [2022-07-07T18:15:24.125245+00:00] logs.DEBUG: AccountHolderCreated {"user":21} {"data":"20220707181524"}
 [2022-07-07T18:16:21.204734+00:00] logs.DEBUG: AccountHolderCreated {"user":22} {"data":"20220707181621"}
 [2022-07-11T12:42:11.253886+00:00] logs.DEBUG: AccountHolderCreated {"user":23} {"data":"20220711124211"}
+[2022-07-12T18:35:32.105855+00:00] logs.DEBUG: AccountHolderCreated {"user":25} {"data":"20220712183532"}
+[2022-07-12T18:41:14.803224+00:00] logs.DEBUG: AccountHolderCreated {"user":29} {"data":"20220712184114"}
+[2022-07-12T18:54:42.622256+00:00] logs.DEBUG: AccountHolderCreated {"user":31} {"data":"20220712185442"}
+[2022-07-12T19:02:35.114952+00:00] logs.DEBUG: AccountHolderCreated {"user":1} {"data":"20220712190235"}
+[2022-07-12T19:42:34.281655+00:00] logs.DEBUG: AccountHolderCreated {"user":2} {"data":"20220712194234"}

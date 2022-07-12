@@ -20,7 +20,6 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
 
     public function chechCnpjAndCpf(array $data)
     {     
-
         if(is_null($data['cpf']) && is_null($data['cnpj']))
         {
             $error = FormatExceptionError::exceptionError(MessageValidation::$cpfOrCnpj);
@@ -148,7 +147,7 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
             return $account->load('account'); 
         } catch (Exception $e) {
             
-            $this->mountAccountHolderLog($account, MessageLogs::$errorWhenTransferring, LevelLogs::DEBUG);
+            Logs::logAccountHolder(MessageLogs::$errorWhenTransferring, $e->getMessage(), LevelLogs::ERROR);
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }
     }
@@ -173,5 +172,12 @@ class AccountHolderRepository extends AccountHolderModel implements AccountHolde
         }
 
         return true;
+    }
+
+    public function invalidToken()
+    {
+        $error = FormatExceptionError::exceptionError(MessageValidation::$invalidToken);
+        $error['code'] = 500;
+        return $error;
     }
 }

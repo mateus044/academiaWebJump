@@ -20,7 +20,6 @@ class AuthenticationController
 
     public function login(Request $request)
     {
-
         $request = $request->all();
         isset($request['login'])    ? $login    = $request['login']    :  $login     = '';
         isset($request['password']) ? $passowrd = $request['password'] :  $passowrd  = '';
@@ -42,14 +41,6 @@ class AuthenticationController
 
     public function logout(Request $request)
     {
-        // if(isset($response['code'])){
-
-        //     $json = FromJson::fromJsonError($response['message'], $response['code']);
-        //     return $httpResponse->setStatusCode($response['code'])->response()->json($json);
-        // } else {
-
-        //     $error = (new AccountHolderCreateResource())->toArray($response);
-        //     return $httpResponse->setStatusCode(201)->response()->json($error);
-        // }
+        //
     }
 }
