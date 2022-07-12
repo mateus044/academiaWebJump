@@ -4,6 +4,7 @@ namespace Source\Utils;
 
 class MessageValidation
 {
+    public static string $invalidToken = "invalid token";
     public static string $userLogged = "UserLogged";
     public static string $invalidCredentiais = "Username or password is invalid";
     public static string $userDoesNotExist = "User does not exist";

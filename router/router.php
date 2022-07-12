@@ -1,13 +1,12 @@
 <?php
 
-
 $route = \PlugRoute\RouteFactory::create();
 
 $middlewares = [
     \Source\Middlewares\JWTAuth::class
 ];
 
-$route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers', 'middlewares'=>$middlewares], function($route){
+$route->group(['prefix' => '/accountholder', 'namespace' => 'Source\\Controllers'], function($route){
     $route->post('/storage','\\AccountHolderController@storageAccount');
     $route->post('/transfer','\\AccountHolderController@transferAccount');
     $route->post('/deposit','\\AccountHolderController@depositAccount');

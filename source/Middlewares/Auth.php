@@ -2,14 +2,27 @@
 
 namespace Source\Middlewares;
 
-use PlugRoute\Http\Request;
-use PlugRoute\Middleware\PlugRouteMiddleware;
+use Exception;
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 
-class Auth implements PlugRouteMiddleware
+class Auth 
 {
 
-    public function handler(Request $request) : Request
-    {   
-        return $request;
+    /**
+     * @return string $token
+    */
+    public function authorization() 
+    {
+        if(isset($_SERVER['HTTP_AUTHORIZATION'])){
+            $token = $_SERVER['HTTP_AUTHORIZATION'];
+            $token = str_replace("Bearer",'', $token);
+            $token = trim($token);
+            $decoded = JWT::decode($token, new Key('example_key', 'HS256'));
+            return $decoded;
+        } else {
+
+            throw new Exception('invalid token',406);
+        } 
     }
 }

@@ -51,3 +51,12 @@
 [2022-07-08T18:23:32.685348+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220708182332"}
 [2022-07-08T18:24:50.301600+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220708182450"}
 [2022-07-08T18:24:51.024481+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220708182451"}
+[2022-07-11T13:48:18.281709+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220711134818"}
+[2022-07-11T13:48:18.801537+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220711134818"}
+[2022-07-11T13:51:40.958230+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220711135140"}
+[2022-07-11T13:59:22.022998+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220711135922"}
+[2022-07-11T14:01:23.459241+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220711140123"}
+[2022-07-11T14:08:02.877883+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220711140802"}
+[2022-07-11T15:05:23.681682+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220711150523"}
+[2022-07-11T15:06:03.764934+00:00] logs.ERROR: ErrorCreatingAccount {"user":"{\"message\":\"accountExists\"}"} {"data":"20220711150603"}
+[2022-07-12T01:26:35.288093+00:00] logs.ERROR: ErrorMakingDeposit {"user":"{\"message\":\"accountNotExists\"}"} {"data":"20220712012635"}

@@ -21,3 +21,4 @@
 [2022-07-07T20:40:09.378364+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"Call to undefined method Source\\Repository\\AuthenticationRepository\\AuthenticationRepository::testAuthentication()"} {"data":"20220707204009"}
 [2022-07-07T20:58:32.007815+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"login\":\"invalidLogin\",\"password\":\"123456\"}"} {"data":"20220707205832"}
 [2022-07-07T20:58:44.093404+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"login\":\"invalidLogin\",\"password\":\"123456\"}"} {"data":"20220707205844"}
+[2022-07-12T01:26:07.017733+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"login\":\"invalidLogin\",\"password\":\"123456\"}"} {"data":"20220712012607"}
