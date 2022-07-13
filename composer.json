@@ -31,7 +31,8 @@
         "erandir/plug-http": "^2.0",
         "php-di/php-di": "^6.4",
         "firebase/php-jwt": "^6.2",
-        "pecee/simple-router": "4.3.7.2"
+        "pecee/simple-router": "4.3.7.2",
+        "league/container": "^4.2"
         
        
         

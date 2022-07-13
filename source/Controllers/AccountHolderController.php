@@ -12,6 +12,14 @@ use Pecee\Http\Request;
 class AccountHolderController
 {
 
+    public $accountHolder;
+
+    public function __construct(AccountHolderRepository $accountHolder)
+    {
+        $this->accountHolder = $accountHolder;
+    }
+    
+
     public function storageAccount()
     {
         $request  = new Request();
