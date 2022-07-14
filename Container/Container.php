@@ -13,6 +13,7 @@ $container = new Container();
 
 
 $container->add(AccountHolderController::class)->addArgument(AccountHolderRepository::class);
-//$container->add(AccountHolderController::class);
+$container->add(AccountHolderController::class);
 $controller = $container->get(AccountHolderController::class);
+
 

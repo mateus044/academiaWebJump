@@ -158,6 +158,8 @@ class AccountHolderModel  extends Model
                 'cellphone'      => $accountHolderModel['cellphone']
             ];
         }
+
+        JWT::$leeway = 10;
         $jwt = JWT::encode($payload, $key, 'HS256');
         return $jwt;
     }

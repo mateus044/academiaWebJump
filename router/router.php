@@ -2,6 +2,7 @@
 
 use Pecee\SimpleRouter\SimpleRouter;
 use Source\Controllers\AccountHolderController;
+use Source\Controllers\AuthenticationController;
 
 $middlewares = [ \Source\Middlewares\JWTAuth::class];
 
@@ -15,6 +16,11 @@ SimpleRouter::group(['middleware' => $middlewares, 'prefix' => '/accountholder']
 SimpleRouter::group(['prefix' => '/'], function () {
     SimpleRouter::post('/storage',   [AccountHolderController::class, 'storageAccount']);
     SimpleRouter::post('/accountholder', [AccountHolderController::class, 'invalidToken']);
+    SimpleRouter::post('/login', [AuthenticationController::class, 'login']);
+});
+
+SimpleRouter::get('/home', function() {
+    return 'Hello world';
 });
 
 SimpleRouter::start();

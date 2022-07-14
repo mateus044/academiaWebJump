@@ -2,8 +2,9 @@
 
 namespace Source\Controllers;
 
-use PlugRoute\Http\Request;
+//use PlugRoute\Http\Request;
 use PlugHttp\Response;
+use Pecee\Http\Request;
 use Source\Repository\AuthenticationRepository\AuthenticationRepository;
 use Source\Resource\AuthenticationResource\AuthenticationLoginResource;
 use Source\Utils\FromJson;
@@ -11,21 +12,19 @@ use Source\Utils\FromJson;
 class AuthenticationController
 {
 
-    private $authenticationRepository;
+    public function login()
+    {   
+        $request  = new Request();
 
-    public function __construct(AuthenticationRepository $authenticationRepository) 
-    {
-        $this->authenticationRepository = $authenticationRepository;
-    }
+        $login    = $request->getInputHandler()->value('login');
+        $password = $request->getInputHandler()->value('password');
 
-    public function login(Request $request)
-    {
-        $request = $request->all();
-        isset($request['login'])    ? $login    = $request['login']    :  $login     = '';
-        isset($request['password']) ? $passowrd = $request['password'] :  $passowrd  = '';
+        is_null($login)    ? $login    = '' : $login    = $login;
+        is_null($password) ? $password = '' : $password = $password;     
 
         $httpResponse = new Response();
-        $response = $this->authenticationRepository->login($login, $passowrd);
+        $authenticationRepository = new AuthenticationRepository();
+        $response = $authenticationRepository->login($login, $password);
 
         if(isset($response['code'])){
 

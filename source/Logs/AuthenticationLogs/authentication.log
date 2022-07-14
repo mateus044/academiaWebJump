@@ -22,3 +22,8 @@
 [2022-07-07T20:58:32.007815+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"login\":\"invalidLogin\",\"password\":\"123456\"}"} {"data":"20220707205832"}
 [2022-07-07T20:58:44.093404+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"login\":\"invalidLogin\",\"password\":\"123456\"}"} {"data":"20220707205844"}
 [2022-07-12T01:26:07.017733+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"login\":\"invalidLogin\",\"password\":\"123456\"}"} {"data":"20220712012607"}
+[2022-07-14T13:40:23.519256+00:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"User does not exist\"}"} {"data":"20220714134023"}
+[2022-07-14T13:57:40.136099+00:00] logs.DEBUG: UserLogged {"user":"82957769085"} {"data":"20220714135740"}
+[2022-07-14T13:57:42.020778+00:00] logs.DEBUG: UserLogged {"user":"82957769085"} {"data":"20220714135742"}
+[2022-07-14T13:57:55.178179+00:00] logs.DEBUG: UserLogged {"user":"82957769085"} {"data":"20220714135755"}
+[2022-07-14T14:19:43.507664+00:00] logs.DEBUG: UserLogged {"user":"82957769085"} {"data":"20220714141943"}
