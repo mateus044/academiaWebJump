@@ -16,7 +16,7 @@
 <br>
 <h3>Login</h3>
 <br>
-<p>Para efetuar o login e assim gerar o token que permitirá a execição das principais funcionalidades basta inserir os seguintes dados.</p>
+<p>Para efetuar o login e assim gerar o token que permitirá a execução das principais funcionalidades, basta inserir os seguintes dados.</p>
 
     * Rota: http://webjump.academia.localhost/login
 
