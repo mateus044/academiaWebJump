@@ -4,6 +4,7 @@ namespace Source\Utils;
 
 class MessageLogs
 {
+    public static string $errorFinding= "ErrorFinding";
     public static string $userLogged = "UserLogged";
     public static string $withdrawSuccessfully = "Withdraw Made Successfully";
     public static string $depositMade = "DepositMadeSuccessfully";

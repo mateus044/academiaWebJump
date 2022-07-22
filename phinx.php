@@ -20,10 +20,10 @@ return
         ],
         'development' => [
             'adapter' => 'mysql',
-            'host' => 'db',
+            'host' => 'localhost',
             'name' => 'trilha',
             'user' => 'root',
-            'pass' => 'D7dUKOiqMTroupS0J94-uzBdo4Op9QR_',
+            'pass' => '',
             'port' => '3306',
             'charset' => 'utf8',
         ],

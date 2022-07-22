@@ -2,9 +2,9 @@
 
 namespace Source\Middlewares;
 
-use Exception;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
+use Pecee\Http\Request;
 
 class Auth 
 {
@@ -12,17 +12,28 @@ class Auth
     /**
      * @return string $token
     */
-    public function authorization() 
-    {   
-        if(isset($_SERVER['HTTP_AUTHORIZATION'])){
-            $token = $_SERVER['HTTP_AUTHORIZATION'];
+    public function authorization(Request $request) 
+    {  
+
+        if(isset($request->getHeaders()['http-authorization'])){
+            $token = $request->getHeaders()['http-authorization'];
             $token = str_replace("Bearer",'', $token);
             $token = trim($token);
             $decoded = JWT::decode($token, new Key('example_key', 'HS256'));
             return true;
         } else {
             return false;
-            //throw new Exception('invalid token',406);
         } 
+
+
+        // if(isset($_SERVER['HTTP_AUTHORIZATION'])){
+        //     $token = $_SERVER['HTTP_AUTHORIZATION'];
+        //     $token = str_replace("Bearer",'', $token);
+        //     $token = trim($token);
+        //     $decoded = JWT::decode($token, new Key('example_key', 'HS256'));
+        //     return true;
+        // } else {
+        //     return false;
+        // } 
     }
 }

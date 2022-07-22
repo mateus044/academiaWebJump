@@ -9,7 +9,6 @@ class FromJson {
     {  
         $temp = json_decode($message);
         $temp->code = $code;
-        $json = json_encode($temp);
-        return $json;
+        return $temp;
     }
 }

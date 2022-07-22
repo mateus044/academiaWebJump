@@ -11,10 +11,10 @@ $capsule = new DB();
 $config = [
 
     "driver" => "mysql",
-    "host" => "db",
+    "host" => "localhost",
     "database" => "trilha",
     "username" => "root",
-    "password" => "D7dUKOiqMTroupS0J94-uzBdo4Op9QR_",
+    "password" => "",
     "charset"   => "utf8",
     "collation" => "utf8_unicode_ci",
 ];

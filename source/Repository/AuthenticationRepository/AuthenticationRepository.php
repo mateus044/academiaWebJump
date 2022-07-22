@@ -45,11 +45,11 @@ class AuthenticationRepository extends AccountHolderModel implements Authenticat
         try {
             $credentiais   = $this->authenticarFields($login, $passowrd);
             $accountHolder = (new AuthenticationFindRepository())->findUser($credentiais);
-            $token = $this->validAccountHolderPassword($accountHolder, $credentiais['password']);
+            $token = $this->validAccountHolderPassword($accountHolder->load('address','account'), $credentiais['password']);
             $this->mountAuthenticationLog($accountHolder, MessageValidation::$userLogged, LevelLogs::DEBUG);
             return $token;            
         } catch (Exception $e) {
-
+            var_dump($e->getMessage());
             Logs::logAuthentication(MessageLogs::$errorCreating ,$e->getMessage(), LevelLogs::ERROR);
             return ['message'=>$e->getMessage(), 'code'=>$e->getCode()];
         }

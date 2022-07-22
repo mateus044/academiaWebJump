@@ -33,6 +33,36 @@ class AccountHoulderFindRepository extends AccountHolderModel implements Account
         return $accountHolder;
     }
 
+    public function validAccountHolder($id)
+    {
+        if(!is_integer($id))
+        {
+            $error = FormatExceptionError::exceptionError(MessageValidation::$onlyInteger);
+            throw new Exception(json_encode($error) ,406);
+        }
+
+        if($id <= 0)
+        {
+            $error = FormatExceptionError::exceptionError(MessageValidation::$onlyPositiveNumbers);
+            throw new Exception(json_encode($error) ,406);
+        }
+
+        return $id;
+    }
+
+    public function listAccountHolder($id)
+    {
+        $response = $this->validAccountHolder($id);
+        $accountHolder = $this->find($response);
+
+        if(!$accountHolder == null) {
+            return $accountHolder;
+        } 
+
+        $error = FormatExceptionError::exceptionError(MessageValidation::$accountHolderNotFount);
+        throw new Exception(json_encode($error) ,404);
+    }
+
     public function findAccountHolderWithoutAddress() 
     {
        //

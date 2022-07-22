@@ -125,37 +125,62 @@ class AccountHolderModel  extends Model
     }
     
     public function Authentication(AccountHolderModel $accountHolderModel)
-    {      
+    {     
         $key = 'example_key';
         if(!is_null($accountHolderModel['cpf']))
         {   
             $payload = [
-                'iss' => 'http://example.org',
-                'aud' => 'http://example.com',
+
                 'iat' => 1356999524,
                 'nbf' => 1357000000,
+                'id'                => $accountHolderModel['id'],
+                'name'              => $accountHolderModel['name'],
                 'user'              => $accountHolderModel['cpf'],
-                'rg'                => $accountHolderModel['cellphone'],
-                'stateRegistration' => $accountHolderModel['cellphone'],
-                'birthDate'      => $accountHolderModel['cellphone'],
-                'foundationDate' => $accountHolderModel['cellphone'],
-                'cellphone'      => $accountHolderModel['cellphone']
+                'rg'                => $accountHolderModel['rg'],
+                'stateRegistration' => $accountHolderModel['stateRegistration'],
+                'birthDate'      => $accountHolderModel['birthDate'],
+                'foundationDate' => $accountHolderModel['foundationDate'],
+                'cellphone'      => $accountHolderModel['cellphone'],
+                'address' => [
+                    'street' => $accountHolderModel->address->street,
+                    'number' => $accountHolderModel->address->number,
+                    'cep'  => $accountHolderModel->address->cep,
+                    'city' => $accountHolderModel->address->city,
+                    'uf'   => $accountHolderModel->address->uf
+                ],
+                'account' => [
+                    'id' => $accountHolderModel->account->id,
+                    'number'=> $accountHolderModel->account->number,
+                    'value'=> $accountHolderModel->account->value,
+                ]
             ];
         }
 
         if(!is_null($accountHolderModel['cnpj']))
         {   
             $payload = [
-                'iss' => 'http://example.org',
-                'aud' => 'http://example.com',
                 'iat' => 1356999524,
                 'nbf' => 1357000000,
+                'id'                => $accountHolderModel['id'],
+                'name'              => $accountHolderModel['name'],
                 'user'              => $accountHolderModel['cnpj'],
-                'rg'                => $accountHolderModel['cellphone'],
-                'stateRegistration' => $accountHolderModel['cellphone'],
-                'birthDate'      => $accountHolderModel['cellphone'],
-                'foundationDate' => $accountHolderModel['cellphone'],
-                'cellphone'      => $accountHolderModel['cellphone']
+                'rg'                => $accountHolderModel['rg'],
+                'stateRegistration' => $accountHolderModel['stateRegistration'],
+                'birthDate'      => $accountHolderModel['birthDate'],
+                'foundationDate' => $accountHolderModel['foundationDate'],
+                'cellphone'      => $accountHolderModel['cellphone'],
+                'address' => [
+                    'street' => $accountHolderModel->address->street,
+                    'number' => $accountHolderModel->address->number,
+                    'cep'  => $accountHolderModel->address->cep,
+                    'city' => $accountHolderModel->address->city,
+                    'uf'   => $accountHolderModel->address->uf
+                ],
+                'account' => [
+                    'id' => $accountHolderModel->account->id,
+                    'number'=> $accountHolderModel->account->number,
+                    'value'=> $accountHolderModel->account->value,
+                ]
             ];
         }
 

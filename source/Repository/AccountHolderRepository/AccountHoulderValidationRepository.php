@@ -116,10 +116,10 @@ class AccountHoulderValidationRepository extends AccountHolderModel implements A
             return $cpf;
         }
 
-        $getCPF = $validateCpf->getCPF($cpf['response']);
-        if(is_string($getCPF)){
-            return $getCPF;
-        }
+       // $getCPF = $validateCpf->getCPF($cpf['response']);
+       // if(is_string($getCPF)){
+       //     return $getCPF;
+       // }
 
         $this->setCpf($cpf['response']);
         return null;

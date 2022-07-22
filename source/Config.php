@@ -6,7 +6,7 @@ const DATA_LAYER_CONFIG = [
     "port" => "3306",
     "dbname" => "trilha",
     "username" => "root",
-    "passwd" => "D7dUKOiqMTroupS0J94-uzBdo4Op9QR_",
+    "passwd" => '',
     "options" => [
         PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -15,4 +15,5 @@ const DATA_LAYER_CONFIG = [
     ]
 ];
 
-define("URL_BASE", "http://webjump.academia.localhost/");
+define("URL_BASE", "localhost:8000/");
+//define("URL_BASE", "http://webjump.academia.localhost/");

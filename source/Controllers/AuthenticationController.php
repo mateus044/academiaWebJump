@@ -2,7 +2,6 @@
 
 namespace Source\Controllers;
 
-//use PlugRoute\Http\Request;
 use PlugHttp\Response;
 use Pecee\Http\Request;
 use Source\Repository\AuthenticationRepository\AuthenticationRepository;
@@ -13,7 +12,7 @@ class AuthenticationController
 {
 
     public function login()
-    {   
+    {  
         $request  = new Request();
 
         $login    = $request->getInputHandler()->value('login');
@@ -28,9 +27,8 @@ class AuthenticationController
 
         if(isset($response['code'])){
 
-            $json = FromJson::fromJsonError($response['message'], $response['code']);
-            return $httpResponse->setStatusCode($response['code'])->response()->json($json);
-
+            $error = FromJson::fromJsonError($response['message'], $response['code']);
+            return $httpResponse->setStatusCode($response['code'])->response()->json($error);
         } else {
             
             $error = (new AuthenticationLoginResource())->toArray($response);
@@ -38,7 +36,7 @@ class AuthenticationController
         }
     }
 
-    public function logout(Request $request)
+    public function logout()
     {
         //
     }

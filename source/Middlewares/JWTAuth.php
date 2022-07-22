@@ -8,15 +8,28 @@ use Pecee\Http\Request;
 class JWTAuth implements IMiddleware
 {
     public function handle(Request $request): void
-    {
-        try {
+    {  
+        try{
             $auth  = new Auth();
-            $token = $auth->authorization();
+            $token = $auth->authorization($request);
             if ($token == false) {
                 $request->setRewriteUrl('/accountholder');
             }
-        } catch (\Throwable $th) {
+
+        }catch(\Throwable $e) {
             $request->setRewriteUrl('/accountholder');
         }
+        
+
+
+        // try {
+        //     $auth  = new Auth();
+        //     $token = $auth->authorization();
+        //     if ($token == false) {
+        //         $request->setRewriteUrl('/accountholder');
+        //     }
+        // } catch (\Throwable $th) {
+        //     $request->setRewriteUrl('/accountholder');
+        // }
     }
 }

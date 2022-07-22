@@ -8,9 +8,32 @@ use Source\Resource\AccountHolderResource\AccountHolderResource;
 use PlugHttp\Response;
 use Source\Utils\FromJson;
 use Pecee\Http\Request;
+use Source\Resource\AccountHolderResource\AccountHolderListRessource;
 
 class AccountHolderController
 {
+
+
+    public function accountHolderList()
+    {
+        $request  = new Request();
+        $accountHolder_id = $request->getInputHandler()->value('accountHolder');
+        is_null($accountHolder_id) ? $accountHolder_id = 0 : (int) $accountHolder_id = $accountHolder_id;
+
+        $httpResponse  = new Response();
+        $accountHolder = new AccountHolderRepository();
+        $response = $accountHolder->accountHolderList($accountHolder_id);
+
+        if (isset($response['code'])) {
+
+            $jsonError = FromJson::fromJsonError($response['message'], $response['code']);
+            return $httpResponse->setStatusCode($response['code'])->response()->json($jsonError);
+        } else {
+
+            $error = (new AccountHolderResource())->toArray($response);
+            return $httpResponse->setStatusCode(201)->response()->json($error);
+        }
+    }
 
     public function storageAccount()
     {
@@ -33,10 +56,11 @@ class AccountHolderController
         $httpResponse  = new Response();
         $accountHolder = new AccountHolderRepository();
         $response = $accountHolder->storageAccountHolder($array);
+        
         if (isset($response['code'])) {
 
-            $json = FromJson::fromJsonError($response['message'], $response['code']);
-            return $httpResponse->setStatusCode($response['code'])->response()->json($json);
+            $jsonError = FromJson::fromJsonError($response['message'], $response['code']);
+            return $httpResponse->setStatusCode($response['code'])->response()->json($jsonError);
         } else {
 
             $error = (new AccountHolderCreateResource())->toArray($response);
@@ -54,7 +78,7 @@ class AccountHolderController
         is_null($value) ? $value = 0 : $value = $value;
 
         $array = array(
-            'value' => $value,
+            'value' => (float) $value,
             'number' => null,
             'accountHolder_id' => null
         );
@@ -97,7 +121,7 @@ class AccountHolderController
         }
     }
 
-    public function withdrawAccount(Request $request)
+    public function withdrawAccount()
     {
         $request = new Request();
         $accountHolder_id = $request->getInputHandler()->value('accountHolder');
@@ -109,7 +133,7 @@ class AccountHolderController
         $httpResponse  = new Response();
         $accountHolder = new AccountHolderRepository();
         $response = $accountHolder->accountWithdraw($accountHolder_id, $value);
-
+        
         if (isset($response['code'])) {
 
             $json = FromJson::fromJsonError($response['message'], $response['code']);

@@ -874,3 +874,412 @@
 [2022-07-14T13:55:51.845510+00:00] logs.DEBUG: DepositMadeSuccessfully:value:40000 {"user":"01228285004"} {"data":"20220714135551"}
 [2022-07-14T13:56:20.740311+00:00] logs.DEBUG: DepositMadeSuccessfully:value:40000 {"user":"01228285004"} {"data":"20220714135620"}
 [2022-07-14T13:56:21.354096+00:00] logs.DEBUG: DepositMadeSuccessfully:value:40000 {"user":"01228285004"} {"data":"20220714135621"}
+[2022-07-15T16:39:24.468742-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220715163924"}
+[2022-07-15T16:39:40.661506-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220715163940"}
+[2022-07-15T16:40:29.416677-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715164029"}
+[2022-07-15T16:40:57.646555-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164057"}
+[2022-07-15T16:41:30.871588-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164130"}
+[2022-07-15T16:41:31.567698-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164131"}
+[2022-07-15T16:41:32.065067-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164132"}
+[2022-07-15T16:41:32.424311-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164132"}
+[2022-07-15T16:41:32.586622-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164132"}
+[2022-07-15T16:41:45.974872-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164145"}
+[2022-07-15T16:41:46.642890-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164146"}
+[2022-07-15T16:41:46.821772-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164146"}
+[2022-07-15T16:41:46.968659-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164146"}
+[2022-07-15T16:41:59.269412-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164159"}
+[2022-07-15T16:41:59.740611-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164159"}
+[2022-07-15T16:41:59.929468-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164159"}
+[2022-07-15T16:43:39.366899-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164339"}
+[2022-07-15T16:44:55.870617-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164455"}
+[2022-07-15T16:44:56.461900-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164456"}
+[2022-07-15T16:45:22.476114-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164522"}
+[2022-07-15T16:48:41.222121-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164841"}
+[2022-07-15T16:48:41.693122-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164841"}
+[2022-07-15T16:48:42.125829-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164842"}
+[2022-07-15T16:48:42.279390-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164842"}
+[2022-07-15T16:49:54.624737-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164954"}
+[2022-07-15T16:49:55.309634-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164955"}
+[2022-07-15T16:49:55.435185-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715164955"}
+[2022-07-15T16:51:36.424341-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165136"}
+[2022-07-15T16:51:36.979948-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165136"}
+[2022-07-15T16:51:37.543814-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165137"}
+[2022-07-15T16:51:38.448609-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165138"}
+[2022-07-15T16:51:38.639018-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165138"}
+[2022-07-15T16:51:47.570518-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165147"}
+[2022-07-15T16:51:48.036108-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165148"}
+[2022-07-15T16:52:03.075120-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165203"}
+[2022-07-15T16:52:03.554581-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165203"}
+[2022-07-15T16:52:03.720184-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165203"}
+[2022-07-15T16:52:04.020872-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165204"}
+[2022-07-15T16:52:04.172959-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165204"}
+[2022-07-15T16:52:04.330312-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165204"}
+[2022-07-15T16:52:53.902336-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for db failed: Temporary failure in name resolution (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715165253"}
+[2022-07-15T16:56:23.006496-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220715165623"}
+[2022-07-15T17:00:07.111694-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"cpfExists\"}"} {"data":"20220715170007"}
+[2022-07-15T17:00:24.406367-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trilha.account_holders' doesn't exist (SQL: select * from `account_holders` where `cpf` = 14701321761 limit 1)"} {"data":"20220715170024"}
+[2022-07-15T17:00:31.262816-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220715170031"}
+[2022-07-15T17:10:43.962733-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"cpfExists\"}"} {"data":"20220715171043"}
+[2022-07-15T17:11:32.477388-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715171132"}
+[2022-07-15T17:13:05.884990-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715171305"}
+[2022-07-15T17:13:29.360672-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715171329"}
+[2022-07-15T17:13:38.724837-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715171338"}
+[2022-07-15T17:13:43.925357-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715171343"}
+[2022-07-15T17:14:06.431891-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715171406"}
+[2022-07-15T17:28:00.105400-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715172800"}
+[2022-07-15T17:31:02.026914-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173102"}
+[2022-07-15T17:31:03.241284-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173103"}
+[2022-07-15T17:31:31.828318-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173131"}
+[2022-07-15T17:32:27.798001-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173227"}
+[2022-07-15T17:32:30.258924-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173230"}
+[2022-07-15T17:32:43.790279-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173243"}
+[2022-07-15T17:32:45.288157-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173245"}
+[2022-07-15T17:32:47.813360-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173247"}
+[2022-07-15T17:32:57.853113-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173257"}
+[2022-07-15T17:32:58.459088-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173258"}
+[2022-07-15T17:33:29.895807-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173329"}
+[2022-07-15T17:33:46.181164-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173346"}
+[2022-07-15T17:33:56.469825-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173356"}
+[2022-07-15T17:34:35.886853-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173435"}
+[2022-07-15T17:35:06.625950-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173506"}
+[2022-07-15T17:35:13.806340-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173513"}
+[2022-07-15T17:35:14.785387-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173514"}
+[2022-07-15T17:35:46.889254-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173546"}
+[2022-07-15T17:35:58.866350-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173558"}
+[2022-07-15T17:36:00.394834-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173600"}
+[2022-07-15T17:36:00.938230-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173600"}
+[2022-07-15T17:36:06.146594-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173606"}
+[2022-07-15T17:37:13.983855-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173713"}
+[2022-07-15T17:38:26.260513-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173826"}
+[2022-07-15T17:39:43.719572-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173943"}
+[2022-07-15T17:39:44.465550-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173944"}
+[2022-07-15T17:39:45.292237-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173945"}
+[2022-07-15T17:39:45.740118-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173945"}
+[2022-07-15T17:39:46.150729-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715173946"}
+[2022-07-15T17:40:03.620348-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715174003"}
+[2022-07-15T17:40:04.574731-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715174004"}
+[2022-07-15T17:40:05.164451-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715174005"}
+[2022-07-15T17:40:05.653547-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715174005"}
+[2022-07-15T17:40:14.395243-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715174014"}
+[2022-07-15T17:42:24.681239-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715174224"}
+[2022-07-15T17:42:34.733302-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"cpfExists\"}"} {"data":"20220715174234"}
+[2022-07-15T17:43:17.534343-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"cpfExists\"}"} {"data":"20220715174317"}
+[2022-07-15T17:43:21.099926-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"cpfExists\"}"} {"data":"20220715174321"}
+[2022-07-15T17:43:21.743510-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"cpfExists\"}"} {"data":"20220715174321"}
+[2022-07-15T17:43:47.877911-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715174347"}
+[2022-07-15T17:43:57.455576-03:00] logs.DEBUG: AccountHolderCreated {"user":"25788821000165"} {"data":"20220715174357"}
+[2022-07-15T17:46:09.343271-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174609"}
+[2022-07-15T17:46:10.448179-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174610"}
+[2022-07-15T17:46:11.014960-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174611"}
+[2022-07-15T17:46:11.510341-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174611"}
+[2022-07-15T17:46:11.676689-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174611"}
+[2022-07-15T17:46:11.842697-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174611"}
+[2022-07-15T17:46:12.001571-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174612"}
+[2022-07-15T17:46:12.161330-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174612"}
+[2022-07-15T17:46:12.320070-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174612"}
+[2022-07-15T17:46:12.485602-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174612"}
+[2022-07-15T17:46:12.631402-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174612"}
+[2022-07-15T17:46:12.790627-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174612"}
+[2022-07-15T17:46:12.961071-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174612"}
+[2022-07-15T17:46:13.110737-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174613"}
+[2022-07-15T17:46:13.281622-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"14701321761"} {"data":"20220715174613"}
+[2022-07-15T17:48:05.554625-03:00] logs.ERROR: ErrorWhenTransferring {"user":"{\"message\":\"accountNotExists\"}"} {"data":"20220715174805"}
+[2022-07-15T17:48:24.476953-03:00] logs.DEBUG: DepositMadeSuccessfully:value:10000 {"user":"25788821000165"} {"data":"20220715174824"}
+[2022-07-15T17:48:33.742974-03:00] logs.ERROR: ErrorWhenTransferring {"user":"{\"message\":\"accountNotExists\"}"} {"data":"20220715174833"}
+[2022-07-15T17:49:15.219177-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174915"}
+[2022-07-15T17:49:16.996943-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174916"}
+[2022-07-15T17:49:17.497356-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174917"}
+[2022-07-15T17:49:17.607901-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174917"}
+[2022-07-15T17:49:17.783231-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174917"}
+[2022-07-15T17:49:17.953223-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174917"}
+[2022-07-15T17:49:18.139294-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174918"}
+[2022-07-15T17:49:18.281808-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174918"}
+[2022-07-15T17:49:18.456529-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174918"}
+[2022-07-15T17:49:18.605288-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174918"}
+[2022-07-15T17:49:18.777861-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174918"}
+[2022-07-15T17:49:18.918706-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174918"}
+[2022-07-15T17:49:19.055844-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174919"}
+[2022-07-15T17:49:19.373712-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174919"}
+[2022-07-15T17:49:19.506811-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174919"}
+[2022-07-15T17:49:19.764514-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174919"}
+[2022-07-15T17:49:19.907652-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174919"}
+[2022-07-15T17:49:20.071046-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174920"}
+[2022-07-15T17:49:20.219602-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174920"}
+[2022-07-15T17:49:20.354400-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174920"}
+[2022-07-15T17:49:20.513890-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174920"}
+[2022-07-15T17:49:20.662998-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174920"}
+[2022-07-15T17:49:20.800745-03:00] logs.DEBUG: TransferMadeSuccessfully:value:6500.9:for:70050715174819 {"user":"14701321761"} {"data":"20220715174920"}
+[2022-07-15T17:49:20.942675-03:00] logs.ERROR: ErrorWhenTransferring {"user":"{\"message\":\"insufficient fund\"}"} {"data":"20220715174920"}
+[2022-07-15T17:49:21.121216-03:00] logs.ERROR: ErrorWhenTransferring {"user":"{\"message\":\"insufficient fund\"}"} {"data":"20220715174921"}
+[2022-07-15T17:51:08.881195-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175108"}
+[2022-07-15T17:51:10.360573-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175110"}
+[2022-07-15T17:51:10.837058-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175110"}
+[2022-07-15T17:51:11.265438-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175111"}
+[2022-07-15T17:51:11.432878-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175111"}
+[2022-07-15T17:51:11.905679-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175111"}
+[2022-07-15T17:51:12.049728-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175112"}
+[2022-07-15T17:51:12.376058-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175112"}
+[2022-07-15T17:51:13.228923-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175113"}
+[2022-07-15T17:51:13.400081-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175113"}
+[2022-07-15T17:51:14.289431-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175114"}
+[2022-07-15T17:51:14.456312-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175114"}
+[2022-07-15T17:51:14.632085-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175114"}
+[2022-07-15T17:51:14.794096-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175114"}
+[2022-07-15T17:51:14.965176-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175114"}
+[2022-07-15T17:51:15.146339-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175115"}
+[2022-07-15T17:51:15.282031-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175115"}
+[2022-07-15T17:51:15.437787-03:00] logs.DEBUG: Withdraw Made Successfully:value:10 {"user":"14701321761"} {"data":"20220715175115"}
+[2022-07-15T17:51:19.721445-03:00] logs.ERROR: ErrorWithdwaw {"user":"{\"message\":\"insufficient fund\"}"} {"data":"20220715175119"}
+[2022-07-15T17:51:34.992031-03:00] logs.ERROR: ErrorWithdwaw {"user":"{\"message\":\"insufficient fund\"}"} {"data":"20220715175134"}
+[2022-07-15T17:52:19.607317-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715175219"}
+[2022-07-15T17:52:20.247114-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715175220"}
+[2022-07-15T17:52:48.623835-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715175248"}
+[2022-07-15T17:52:50.287652-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715175250"}
+[2022-07-15T17:53:10.039065-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715175310"}
+[2022-07-15T17:53:10.776921-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715175310"}
+[2022-07-15T17:57:02.549957-03:00] logs.DEBUG: AccountHolderCreated {"user":"25788821000165"} {"data":"20220715175702"}
+[2022-07-15T17:57:35.939156-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715175735"}
+[2022-07-15T17:57:48.146058-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220715175748"}
+[2022-07-15T17:57:55.841267-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\"}"} {"data":"20220715175755"}
+[2022-07-15T17:59:29.031496-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\"}"} {"data":"20220715175929"}
+[2022-07-15T17:59:37.898866-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715175937"}
+[2022-07-15T18:01:01.975348-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\"}"} {"data":"20220715180101"}
+[2022-07-15T18:01:02.571698-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180102"}
+[2022-07-15T18:01:03.413707-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180103"}
+[2022-07-15T18:01:31.375235-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180131"}
+[2022-07-15T18:01:31.970558-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180131"}
+[2022-07-15T18:01:32.548168-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180132"}
+[2022-07-15T18:01:32.998243-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180132"}
+[2022-07-15T18:01:33.562647-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180133"}
+[2022-07-15T18:01:56.564955-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180156"}
+[2022-07-15T18:02:17.507583-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180217"}
+[2022-07-15T18:02:18.117091-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180218"}
+[2022-07-15T18:03:02.927326-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180302"}
+[2022-07-15T18:03:04.424369-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220715180304"}
+[2022-07-17T16:11:28.208951-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\"}"} {"data":"20220717161128"}
+[2022-07-17T16:11:29.565407-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717161129"}
+[2022-07-17T16:11:30.295840-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717161130"}
+[2022-07-17T16:20:14.289698-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717162014"}
+[2022-07-17T16:20:15.250625-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717162015"}
+[2022-07-17T16:31:55.675517-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717163155"}
+[2022-07-17T16:31:56.690135-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717163156"}
+[2022-07-17T16:32:00.708173-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717163200"}
+[2022-07-17T16:32:01.212291-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717163201"}
+[2022-07-17T16:32:01.652508-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717163201"}
+[2022-07-17T16:32:02.515582-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220717163202"}
+[2022-07-17T17:02:16.423729-03:00] logs.ERROR: ErrorWhenTransferring {"user":"{\"message\":\"accountNotExists\"}"} {"data":"20220717170216"}
+[2022-07-18T09:26:52.119434-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cnpj\":\"cnpjExists\"}"} {"data":"20220718092652"}
+[2022-07-19T16:01:03.842280-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719160103"}
+[2022-07-19T16:01:56.383558-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719160156"}
+[2022-07-19T16:09:19.485494-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719160919"}
+[2022-07-19T16:09:37.547305-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"invalidCPF\",\"birthDate\":\"invalidDate\",\"foundationDate\":\"invalidDate\"}"} {"data":"20220719160937"}
+[2022-07-19T16:15:48.178147-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"birthDate\":\"invalidDate\",\"foundationDate\":\"invalidDate\"}"} {"data":"20220719161548"}
+[2022-07-19T16:16:18.406180-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\",\"uf\":\"invalidUf\"}"} {"data":"20220719161618"}
+[2022-07-19T16:17:50.426338-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"cpfExists\"}"} {"data":"20220719161750"}
+[2022-07-19T16:19:10.539144-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\",\"uf\":\"invalidUf\"}"} {"data":"20220719161910"}
+[2022-07-19T16:23:02.293153-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\"}"} {"data":"20220719162302"}
+[2022-07-19T16:25:49.833318-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220719162549"}
+[2022-07-19T16:27:18.595247-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"please chose CPF or CNPJ\"}"} {"data":"20220719162718"}
+[2022-07-19T16:27:32.349435-03:00] logs.DEBUG: AccountHolderCreated {"user":"16661471093"} {"data":"20220719162732"}
+[2022-07-19T17:25:12.008440-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\"}"} {"data":"20220719172512"}
+[2022-07-19T17:25:13.135092-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"street\":\"required\"}"} {"data":"20220719172513"}
+[2022-07-19T17:25:25.965536-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172525"}
+[2022-07-19T17:25:26.506978-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172526"}
+[2022-07-19T17:25:27.032997-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172527"}
+[2022-07-19T17:25:27.194951-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172527"}
+[2022-07-19T17:25:27.364335-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172527"}
+[2022-07-19T17:25:27.523883-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172527"}
+[2022-07-19T17:25:27.692191-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172527"}
+[2022-07-19T17:25:27.844334-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172527"}
+[2022-07-19T17:25:28.010460-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172528"}
+[2022-07-19T17:25:28.163834-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172528"}
+[2022-07-19T17:25:28.297922-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172528"}
+[2022-07-19T17:25:28.440090-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172528"}
+[2022-07-19T17:26:15.860132-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172615"}
+[2022-07-19T17:26:16.643670-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172616"}
+[2022-07-19T17:26:30.393483-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172630"}
+[2022-07-19T17:26:32.224181-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172632"}
+[2022-07-19T17:26:33.195474-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172633"}
+[2022-07-19T17:26:33.973746-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172633"}
+[2022-07-19T17:27:14.718223-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172714"}
+[2022-07-19T17:27:15.222325-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172715"}
+[2022-07-19T17:27:15.893322-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172715"}
+[2022-07-19T17:27:21.867239-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172721"}
+[2022-07-19T17:27:27.011223-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172727"}
+[2022-07-19T17:28:06.956466-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172806"}
+[2022-07-19T17:28:17.620142-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719172817"}
+[2022-07-19T17:28:26.284237-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172826"}
+[2022-07-19T17:28:29.900468-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172829"}
+[2022-07-19T17:28:44.834419-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172844"}
+[2022-07-19T17:29:55.169557-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719172955"}
+[2022-07-19T17:30:45.197189-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719173045"}
+[2022-07-19T17:30:47.923601-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173047"}
+[2022-07-19T17:30:51.858411-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719173051"}
+[2022-07-19T17:31:17.225098-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719173117"}
+[2022-07-19T17:31:18.714962-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173118"}
+[2022-07-19T17:31:19.287415-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173119"}
+[2022-07-19T17:31:19.850847-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173119"}
+[2022-07-19T17:31:20.169265-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173120"}
+[2022-07-19T17:31:20.330969-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173120"}
+[2022-07-19T17:31:23.784072-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719173123"}
+[2022-07-19T17:37:44.961216-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719173744"}
+[2022-07-19T17:37:49.152811-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173749"}
+[2022-07-19T17:37:49.704577-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173749"}
+[2022-07-19T17:37:50.113295-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173750"}
+[2022-07-19T17:37:50.285068-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173750"}
+[2022-07-19T17:37:50.440471-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719173750"}
+[2022-07-19T22:03:25.921100-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220325"}
+[2022-07-19T22:03:27.827739-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719220327"}
+[2022-07-19T22:03:56.454486-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220356"}
+[2022-07-19T22:04:04.821239-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220404"}
+[2022-07-19T22:05:00.730852-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220500"}
+[2022-07-19T22:05:47.755751-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719220547"}
+[2022-07-19T22:05:57.203787-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220557"}
+[2022-07-19T22:06:15.231649-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220615"}
+[2022-07-19T22:08:18.209615-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220818"}
+[2022-07-19T22:08:49.270972-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220849"}
+[2022-07-19T22:09:20.516468-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220920"}
+[2022-07-19T22:09:24.041119-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719220924"}
+[2022-07-19T22:10:26.985264-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719221026"}
+[2022-07-19T22:10:44.345882-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719221044"}
+[2022-07-19T22:12:14.449195-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719221214"}
+[2022-07-19T22:12:20.687904-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719221220"}
+[2022-07-19T22:40:18.522510-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224018"}
+[2022-07-19T22:40:19.540963-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719224019"}
+[2022-07-19T22:40:20.228093-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719224020"}
+[2022-07-19T22:41:11.410915-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224111"}
+[2022-07-19T22:41:55.950961-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224155"}
+[2022-07-19T22:42:15.231657-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224215"}
+[2022-07-19T22:43:14.102777-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224314"}
+[2022-07-19T22:44:02.387714-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224402"}
+[2022-07-19T22:44:07.528166-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719224407"}
+[2022-07-19T22:47:25.024550-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224725"}
+[2022-07-19T22:47:50.965369-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719224750"}
+[2022-07-19T22:47:53.712303-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224753"}
+[2022-07-19T22:48:04.550778-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224804"}
+[2022-07-19T22:49:46.052948-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719224946"}
+[2022-07-19T22:50:08.890036-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225008"}
+[2022-07-19T22:50:24.187828-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225024"}
+[2022-07-19T22:50:43.583587-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225043"}
+[2022-07-19T22:50:50.128239-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225050"}
+[2022-07-19T22:50:57.824819-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225057"}
+[2022-07-19T22:51:03.045142-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225103"}
+[2022-07-19T22:51:19.742748-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225119"}
+[2022-07-19T22:51:25.020127-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225125"}
+[2022-07-19T22:51:57.642245-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225157"}
+[2022-07-19T22:52:17.603745-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225217"}
+[2022-07-19T22:52:25.177515-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225225"}
+[2022-07-19T22:52:33.627344-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225233"}
+[2022-07-19T22:52:41.551558-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225241"}
+[2022-07-19T22:52:46.831025-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225246"}
+[2022-07-19T22:53:00.314754-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225300"}
+[2022-07-19T22:53:06.157074-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225306"}
+[2022-07-19T22:53:12.333395-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225312"}
+[2022-07-19T22:53:26.171123-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719225326"}
+[2022-07-19T22:53:28.921947-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225328"}
+[2022-07-19T22:54:27.583486-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225427"}
+[2022-07-19T22:54:30.685972-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225430"}
+[2022-07-19T22:54:49.876374-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225449"}
+[2022-07-19T22:56:01.189247-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225601"}
+[2022-07-19T22:58:31.065927-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225831"}
+[2022-07-19T22:58:42.601214-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719225842"}
+[2022-07-19T23:02:11.035617-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719230211"}
+[2022-07-19T23:04:52.755293-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719230452"}
+[2022-07-19T23:04:57.944652-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719230457"}
+[2022-07-19T23:05:19.649221-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719230519"}
+[2022-07-19T23:05:23.276569-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719230523"}
+[2022-07-19T23:05:54.057107-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719230554"}
+[2022-07-19T23:09:09.464341-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719230909"}
+[2022-07-19T23:10:56.590331-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231056"}
+[2022-07-19T23:11:11.139937-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231111"}
+[2022-07-19T23:11:12.790915-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719231112"}
+[2022-07-19T23:11:13.671317-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719231113"}
+[2022-07-19T23:11:14.261031-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719231114"}
+[2022-07-19T23:11:14.453988-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719231114"}
+[2022-07-19T23:11:14.600754-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719231114"}
+[2022-07-19T23:11:14.755452-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\",\"password\":\"required\",\"rg\":\"required\",\"stateRegistration\":\"required\",\"birthDate\":\"required\",\"foundationDate\":\"required\",\"cellphone\":\"required\"}"} {"data":"20220719231114"}
+[2022-07-19T23:12:07.552115-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231207"}
+[2022-07-19T23:12:26.141983-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231226"}
+[2022-07-19T23:12:43.643477-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\"}"} {"data":"20220719231243"}
+[2022-07-19T23:12:46.385293-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231246"}
+[2022-07-19T23:13:50.690428-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231350"}
+[2022-07-19T23:14:41.451000-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231441"}
+[2022-07-19T23:15:05.960877-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\"}"} {"data":"20220719231505"}
+[2022-07-19T23:15:07.022688-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\"}"} {"data":"20220719231507"}
+[2022-07-19T23:15:10.698120-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\"}"} {"data":"20220719231510"}
+[2022-07-19T23:15:14.932369-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231514"}
+[2022-07-19T23:15:50.858881-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231550"}
+[2022-07-19T23:16:54.862262-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231654"}
+[2022-07-19T23:17:25.976869-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231725"}
+[2022-07-19T23:17:42.704818-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231742"}
+[2022-07-19T23:18:19.751501-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231819"}
+[2022-07-19T23:18:56.564475-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231856"}
+[2022-07-19T23:19:31.960739-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719231931"}
+[2022-07-19T23:21:42.797322-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220719232142"}
+[2022-07-20T10:03:55.020050-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220720100355"}
+[2022-07-20T10:07:30.325912-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"invalidCPF\"}"} {"data":"20220720100730"}
+[2022-07-20T10:07:35.564126-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"invalidCPF\"}"} {"data":"20220720100735"}
+[2022-07-20T10:07:36.247394-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"invalidCPF\"}"} {"data":"20220720100736"}
+[2022-07-20T10:07:36.408400-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"invalidCPF\"}"} {"data":"20220720100736"}
+[2022-07-20T10:07:36.678345-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"cpf\":\"invalidCPF\"}"} {"data":"20220720100736"}
+[2022-07-20T15:56:28.029661-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\"}"} {"data":"20220720155628"}
+[2022-07-20T15:56:31.178093-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220720155631"}
+[2022-07-20T17:37:22.859428-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220720173722"}
+[2022-07-20T17:58:33.626831-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220720175833"}
+[2022-07-20T18:10:23.827288-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\"}"} {"data":"20220720181023"}
+[2022-07-20T18:10:43.518833-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"name\":\"required\"}"} {"data":"20220720181043"}
+[2022-07-20T18:11:05.971073-03:00] logs.DEBUG: AccountHolderCreated {"user":"14701321761"} {"data":"20220720181105"}
+[2022-07-21T12:03:21.966391-03:00] logs.DEBUG: AccountHolderCreated {"user":"51696790000122"} {"data":"20220721120321"}
+[2022-07-22T10:27:13.619262-03:00] logs.DEBUG: AccountHolderCreated {"user":"45038280000165"} {"data":"20220722102713"}
+[2022-07-22T15:19:48.637635-03:00] logs.DEBUG: AccountHolderCreated {"user":"49393229000122"} {"data":"20220722151948"}
+[2022-07-22T17:15:30.045031-03:00] logs.ERROR: ErrorCreatingAccountHolder {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171530"}
+[2022-07-22T17:16:58.393750-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171658"}
+[2022-07-22T17:16:59.266025-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171659"}
+[2022-07-22T17:17:01.263655-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171701"}
+[2022-07-22T17:17:01.748789-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171701"}
+[2022-07-22T17:17:01.907664-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171701"}
+[2022-07-22T17:17:02.081654-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171702"}
+[2022-07-22T17:17:02.259360-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171702"}
+[2022-07-22T17:17:02.436219-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171702"}
+[2022-07-22T17:17:02.594844-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171702"}
+[2022-07-22T17:17:02.758160-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171702"}
+[2022-07-22T17:17:02.927801-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171702"}
+[2022-07-22T17:17:03.097419-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171703"}
+[2022-07-22T17:17:03.262883-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171703"}
+[2022-07-22T17:17:03.458397-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171703"}
+[2022-07-22T17:17:03.633531-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171703"}
+[2022-07-22T17:17:03.823764-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171703"}
+[2022-07-22T17:17:03.993780-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171703"}
+[2022-07-22T17:17:04.164763-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171704"}
+[2022-07-22T17:17:04.478583-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171704"}
+[2022-07-22T17:17:04.641210-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171704"}
+[2022-07-22T17:17:04.843807-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171704"}
+[2022-07-22T17:17:05.031670-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171705"}
+[2022-07-22T17:17:05.188307-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171705"}
+[2022-07-22T17:17:05.372875-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171705"}
+[2022-07-22T17:17:05.519835-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171705"}
+[2022-07-22T17:17:05.706625-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171705"}
+[2022-07-22T17:17:05.904092-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171705"}
+[2022-07-22T17:17:06.060891-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171706"}
+[2022-07-22T17:17:06.229245-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171706"}
+[2022-07-22T17:17:06.409752-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171706"}
+[2022-07-22T17:17:06.588183-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171706"}
+[2022-07-22T17:17:06.767996-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171706"}
+[2022-07-22T17:17:06.958163-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171706"}
+[2022-07-22T17:17:07.140559-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171707"}
+[2022-07-22T17:17:07.728832-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171707"}
+[2022-07-22T17:17:07.880757-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171707"}
+[2022-07-22T17:17:08.184358-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171708"}
+[2022-07-22T17:17:08.340946-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171708"}
+[2022-07-22T17:17:08.596231-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171708"}
+[2022-07-22T17:17:08.752602-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171708"}
+[2022-07-22T17:17:09.022218-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171709"}
+[2022-07-22T17:17:09.163067-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171709"}
+[2022-07-22T17:17:09.340363-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171709"}
+[2022-07-22T17:17:09.469969-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171709"}
+[2022-07-22T17:17:09.747629-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171709"}
+[2022-07-22T17:17:09.909531-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171709"}
+[2022-07-22T17:17:10.036301-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722171710"}
+[2022-07-22T17:20:09.119753-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"accountHolderNotFount\"}"} {"data":"20220722172009"}
+[2022-07-22T17:31:46.993844-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"onlyPositiveNumbers\"}"} {"data":"20220722173146"}
+[2022-07-22T17:31:53.951530-03:00] logs.ERROR: ErrorFinding {"user":"{\"message\":\"onlyInteger\"}"} {"data":"20220722173153"}
